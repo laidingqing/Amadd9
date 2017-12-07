@@ -41,3 +41,8 @@ type ActionToken struct {
 	Token   string    `bson:"token" json:"token"`
 	Expires time.Time `bson:"expires" json:"expires"`
 }
+
+type CurrentUserInfo struct {
+	Roles []string
+	User  *User
+}

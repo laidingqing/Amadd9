@@ -1,1 +1,74 @@
 package user_service
+
+import (
+	"log"
+
+	"github.com/laidingqing/amadd9/common/config"
+	. "github.com/laidingqing/amadd9/common/database"
+	. "github.com/laidingqing/amadd9/common/entities"
+	. "github.com/laidingqing/amadd9/common/err"
+	"github.com/laidingqing/amadd9/common/services"
+	"github.com/laidingqing/amadd9/common/util"
+	mgo "gopkg.in/mgo.v2"
+)
+
+var (
+	userDbCollection = "users"
+)
+
+type Registration struct {
+	NewUser User `json:"user"`
+}
+
+type UserManager struct{}
+
+// SetUp
+// Do't use , tests only
+func (um *UserManager) SetUp(registration *Registration) (string, error) {
+	return "", nil
+}
+
+//Register a new user
+func (um *UserManager) Register(newUser *User) (string, error) {
+	adminUser := services.GetAdminUser()
+	return um.Create(newUser, adminUser)
+}
+
+//Create a normal user
+func (um *UserManager) Create(newUser *User, curUser *CurrentUserInfo) (string, error) {
+	theUser := curUser.User
+	if !util.HasRole(theUser.Roles, "admin") {
+		return "", NotAdminError()
+	}
+	query := func(c *mgo.Collection) error {
+		return c.Insert(newUser)
+	}
+
+	err := ExecuteQuery(userDbCollection, query)
+	log.Printf("Creating new user account for: %v", newUser.UserName)
+	return newUser.ID.Hex(), err
+}
+
+// validateUser func
+func (um *UserManager) validateUser(user *User) error {
+	var err error
+	if len(user.UserName) < 3 || len(user.UserName) > 80 {
+		err = &Error{
+			StatusCode: 400,
+			Reason:     "Username invalid",
+		}
+	}
+	return err
+}
+
+//Validate Password
+func (um *UserManager) validatePassword(password string) error {
+	if len(password) < config.Auth.MinPasswordLength {
+		return &Error{
+			StatusCode: 400,
+			Reason:     "Password too short",
+		}
+	} else {
+		return nil
+	}
+}

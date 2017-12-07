@@ -56,7 +56,7 @@ func hostUrl() string {
 
 func Init(serviceName, registryLocation string) error {
 	log.Print("Initializing registry connection.")
-	nodeId := config.Service.NodeId
+	nodeID := config.Service.NodeId
 	ttl = time.Duration(config.ServiceRegistry.EntryTTL) * time.Second
 	cfg := etcd.Config{
 		Endpoints: []string{config.Service.RegistryLocation},
@@ -69,7 +69,7 @@ func Init(serviceName, registryLocation string) error {
 	}
 	kapi = etcd.NewKeysAPI(client)
 	log.Print("Registering " + serviceName + " Service node at " + hostUrl())
-	if _, err := kapi.Set(context.Background(), registryLocation+nodeId, hostUrl(),
+	if _, err := kapi.Set(context.Background(), registryLocation+nodeID, hostUrl(),
 		&etcd.SetOptions{TTL: ttl}); err != nil {
 		fmt.Println(err)
 		log.Fatal(err)
@@ -82,10 +82,10 @@ func Init(serviceName, registryLocation string) error {
 }
 
 func sendHeartbeat(registryLocation string) {
-	nodeId := config.Service.NodeId
+	nodeID := config.Service.NodeId
 	for {
 		time.Sleep(time.Duration(config.ServiceRegistry.EntryTTL/2) * time.Second)
-		if _, err := kapi.Set(context.Background(), registryLocation+nodeId,
+		if _, err := kapi.Set(context.Background(), registryLocation+nodeID,
 			hostUrl(), &etcd.SetOptions{TTL: ttl}); err != nil {
 			log.Print("Can't send Heartbeat to registry! - " + err.Error())
 		}
@@ -102,8 +102,7 @@ func updateServiceCache() {
 
 func getServiceNodes(serviceLocation string) ([]*etcd.Node, error) {
 	ctx, _ := context.WithTimeout(context.Background(), 7*time.Second)
-	if resp, err := kapi.Get(ctx, serviceLocation,
-		&etcd.GetOptions{Recursive: true}); err != nil {
+	if resp, err := kapi.Get(ctx, serviceLocation, &etcd.GetOptions{Recursive: true}); err != nil {
 		return nil, err
 	} else {
 		return processResponse(resp)
@@ -154,7 +153,7 @@ func getEndpointFromNode(node *etcd.Node) string {
 	return node.Value
 }
 
-//Get a service node for use
+//GetServiceLocation Get a service node for use
 func GetServiceLocation(serviceName string) (string, error) {
 	serviceCache.RLock()
 	defer serviceCache.RUnlock()
@@ -167,21 +166,4 @@ func GetServiceLocation(serviceName string) (string, error) {
 		}
 		return getEndpointFromNode(serviceCache.m[serviceName][index]), nil
 	}
-	return "", nil
-}
-
-//Get a plugin node for use
-func GetPluginLocation(pluginName string) (string, error) {
-	pluginCache.RLock()
-	defer pluginCache.RUnlock()
-	if max := len(pluginCache.m[pluginName]); max == 0 {
-		return "", errors.New("No " + pluginName + " plugins listed!")
-	} else {
-		index := 0
-		if max > 1 {
-			index = random.Intn(max)
-		}
-		return getEndpointFromNode(pluginCache.m[pluginName][index]), nil
-	}
-	return "", nil
 }

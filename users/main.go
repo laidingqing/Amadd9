@@ -4,10 +4,12 @@ import (
 	"log"
 	"net/http"
 
+	restful "github.com/emicklei/go-restful"
 	"github.com/laidingqing/amadd9/common/config"
 	"github.com/laidingqing/amadd9/common/database"
 	"github.com/laidingqing/amadd9/common/registry"
 	"github.com/laidingqing/amadd9/users/user_service"
+	"gopkg.in/natefinch/lumberjack.v2"
 )
 
 func main() {
@@ -17,7 +19,7 @@ func main() {
 		NodeId:           "us1",
 		Port:             "4100",
 		UseSSL:           false,
-		RegistryLocation: "http://localhost:2379",
+		RegistryLocation: "http://localhost:2379", //Etcd endpoints
 	})
 	config.InitEtcd()
 	config.FetchCommonConfig()

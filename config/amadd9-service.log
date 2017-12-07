@@ -1,0 +1,111 @@
+2017/12/07 16:44:12 Initializing registry connection.
+2017/12/07 16:44:13 Setting service registry config
+2017/12/07 16:44:13 Setting Key: EntryTTL, Value: 60
+2017/12/07 16:44:13 Setting Key: CacheRefreshInterval, Value: 75
+2017/12/07 16:44:13 Setting database config
+2017/12/07 16:44:13 Setting Key: DbHost, Value: localhost
+2017/12/07 16:44:13 Setting Key: DbAdminUser, Value: adminuser
+2017/12/07 16:44:13 Setting Key: DbAdminPassword, Value: password
+2017/12/07 16:44:13 Setting Key: DbTimeout, Value: 0
+2017/12/07 16:44:13 Setting Key: MainDb, Value: main_ut
+2017/12/07 16:44:13 Setting logger config
+2017/12/07 16:44:13 Setting Key: LogFile, Value: amadd9-service.log
+2017/12/07 16:44:13 Setting Key: MaxSize, Value: 10
+2017/12/07 16:44:13 Setting Key: MaxBackups, Value: 3
+2017/12/07 16:44:13 Setting Key: MaxAge, Value: 30
+2017/12/07 16:44:13 Setting auth config
+2017/12/07 16:44:13 Setting Key: Authenticator, Value: standard
+2017/12/07 16:44:13 Setting Key: SessionTimeout, Value: 6000
+2017/12/07 16:44:13 Setting Key: PersistentSessions, Value: true
+2017/12/07 16:44:13 Setting Key: AllowGuest, Value: true
+2017/12/07 16:44:13 Setting Key: AllowNewUserRegistration, Value: false
+2017/12/07 16:44:13 Setting Key: MinPasswordLength, Value: 6
+2017/12/07 16:44:13 Setting users config
+2017/12/07 16:44:13 Setting Key: AvatarDb, Value: user_avatars
+2017/12/07 16:44:13 Initializing registry connection.
+2017/12/07 16:44:13 Registering Config Service node at http://localhost:4140
+2017/12/07 16:44:13 Error fetching user services: No listed services!
+2017/12/07 16:44:13 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [36]
+2017/12/07 16:44:13 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [36]
+2017/12/07 16:45:28 Error fetching user services: No listed services!
+2017/12/07 16:45:28 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [38]
+2017/12/07 16:45:28 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [38]
+2017/12/07 16:46:49 Initializing registry connection.
+2017/12/07 16:46:49 Setting service registry config
+2017/12/07 16:46:49 Setting Key: EntryTTL, Value: 60
+2017/12/07 16:46:49 Setting Key: CacheRefreshInterval, Value: 75
+2017/12/07 16:46:49 Setting database config
+2017/12/07 16:46:49 Setting Key: DbHost, Value: localhost
+2017/12/07 16:46:49 Setting Key: DbAdminUser, Value: adminuser
+2017/12/07 16:46:49 Setting Key: DbAdminPassword, Value: password
+2017/12/07 16:46:49 Setting Key: DbTimeout, Value: 0
+2017/12/07 16:46:49 Setting Key: MainDb, Value: main_ut
+2017/12/07 16:46:49 Setting logger config
+2017/12/07 16:46:49 Setting Key: LogFile, Value: amadd9-service.log
+2017/12/07 16:46:49 Setting Key: MaxSize, Value: 10
+2017/12/07 16:46:49 Setting Key: MaxBackups, Value: 3
+2017/12/07 16:46:49 Setting Key: MaxAge, Value: 30
+2017/12/07 16:46:49 Setting auth config
+2017/12/07 16:46:49 Setting Key: Authenticator, Value: standard
+2017/12/07 16:46:49 Setting Key: SessionTimeout, Value: 6000
+2017/12/07 16:46:49 Setting Key: PersistentSessions, Value: true
+2017/12/07 16:46:49 Setting Key: AllowGuest, Value: true
+2017/12/07 16:46:49 Setting Key: AllowNewUserRegistration, Value: false
+2017/12/07 16:46:49 Setting Key: MinPasswordLength, Value: 6
+2017/12/07 16:46:50 Setting users config
+2017/12/07 16:46:50 Setting Key: AvatarDb, Value: user_avatars
+2017/12/07 16:46:50 Initializing registry connection.
+2017/12/07 16:46:50 Registering Config Service node at http://localhost:4140
+2017/12/07 16:46:50 Error fetching user services: No listed services!
+2017/12/07 16:46:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [60]
+2017/12/07 16:46:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [60]
+2017/12/07 16:48:05 Error fetching user services: No listed services!
+2017/12/07 16:48:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [62]
+2017/12/07 16:48:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [62]
+2017/12/07 16:49:20 Error fetching user services: No listed services!
+2017/12/07 16:49:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [64]
+2017/12/07 16:49:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [64]
+2017/12/07 16:50:35 Error fetching user services: No listed services!
+2017/12/07 16:50:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [67]
+2017/12/07 16:50:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [67]
+2017/12/07 16:51:50 Error fetching user services: No listed services!
+2017/12/07 16:51:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [69]
+2017/12/07 16:51:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [69]
+2017/12/07 16:53:05 Error fetching user services: No listed services!
+2017/12/07 16:53:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [72]
+2017/12/07 16:53:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [72]
+2017/12/07 16:54:20 Error fetching user services: No listed services!
+2017/12/07 16:54:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [74]
+2017/12/07 16:54:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [74]
+2017/12/07 16:55:35 Error fetching user services: No listed services!
+2017/12/07 16:55:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [77]
+2017/12/07 16:55:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [77]
+2017/12/07 16:56:50 Error fetching user services: No listed services!
+2017/12/07 16:56:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [79]
+2017/12/07 16:56:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [79]
+2017/12/07 16:58:05 Error fetching user services: No listed services!
+2017/12/07 16:58:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [82]
+2017/12/07 16:58:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [82]
+2017/12/07 16:59:20 Error fetching user services: No listed services!
+2017/12/07 16:59:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [84]
+2017/12/07 16:59:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [84]
+2017/12/07 17:00:35 Error fetching user services: No listed services!
+2017/12/07 17:00:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [87]
+2017/12/07 17:00:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [87]
+2017/12/07 17:01:50 Error fetching user services: No listed services!
+2017/12/07 17:01:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [89]
+2017/12/07 17:01:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [89]
+2017/12/07 17:03:05 Error fetching user services: No listed services!
+2017/12/07 17:03:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [92]
+2017/12/07 17:03:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [92]
+2017/12/07 17:14:10 Error fetching user services: No listed services!
+2017/12/07 17:14:10 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [96]
+2017/12/07 17:14:10 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [96]
+2017/12/07 17:14:10 Error fetching config services: No listed services!
+2017/12/07 17:24:42 Error fetching user services: No listed services!
+2017/12/07 17:24:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [100]
+2017/12/07 17:24:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [100]
+2017/12/07 17:25:57 Error fetching user services: No listed services!
+2017/12/07 17:25:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [102]
+2017/12/07 17:25:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [102]
+2017/12/07 17:26:28 Can't send Heartbeat to registry! - client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused

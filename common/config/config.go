@@ -31,9 +31,7 @@ var Search struct {
 }
 
 var Database struct {
-	DbAddr          string
-	DbPort          string
-	UseSSL          bool
+	DbHost          string
 	DbAdminUser     string
 	DbAdminPassword string
 	DbTimeout       string
@@ -65,19 +63,7 @@ var Users struct {
 	AvatarDb string
 }
 
-var Notifications struct {
-	TemplateDir      string
-	UseHtmlTemplates bool
-	SmtpServer       string
-	UseSSL           bool
-	SmtpPort         int
-	SmtpUser         string
-	SmtpPassword     string
-	MainSiteUrl      string
-	FromEmail        string
-}
-
-// Initialize Default values
+// LoadDefaults ..Initialize Default values
 func LoadDefaults() {
 	execDir, err := util.GetExecDirectory()
 	if err != nil {
@@ -88,9 +74,7 @@ func LoadDefaults() {
 	Frontend.WebAppDir = path.Join(execDir, "web_app/app")
 	Frontend.PluginDir = path.Join(execDir, "plugins")
 	Frontend.Homepage = ""
-	Database.DbAddr = "127.0.0.1"
-	Database.DbPort = "5984"
-	Database.UseSSL = false
+	Database.DbHost = "localhost"
 	Database.DbAdminUser = "adminuser"
 	Database.DbAdminPassword = "password"
 	Database.DbTimeout = "0"
@@ -106,13 +90,4 @@ func LoadDefaults() {
 	Auth.AllowNewUserRegistration = false
 	Auth.MinPasswordLength = 6
 	Users.AvatarDb = "avatar_ut"
-	Notifications.TemplateDir = "templates"
-	Notifications.UseHtmlTemplates = true
-	Notifications.MainSiteUrl = "http://localhost:8081"
-	Notifications.SmtpServer = "localhost"
-	Notifications.UseSSL = false
-	Notifications.SmtpPort = 587
-	Notifications.SmtpUser = "user"
-	Notifications.SmtpPassword = "password"
-	Notifications.FromEmail = "admin@localhost"
 }

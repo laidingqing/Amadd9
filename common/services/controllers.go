@@ -2,9 +2,14 @@ package services
 
 import (
 	"log"
+	"net/http"
+	"strconv"
+	"strings"
 
 	restful "github.com/emicklei/go-restful"
 	"github.com/laidingqing/amadd9/common/config"
+	. "github.com/laidingqing/amadd9/common/entities"
+	. "github.com/laidingqing/amadd9/common/err"
 )
 
 // Controller ..
@@ -64,4 +69,53 @@ func LogError(request *restful.Request, resp *restful.Response, err error) {
 	url := request.Request.URL.String()
 	remoteAddr := request.Request.RemoteAddr
 	log.Printf("[ERROR] %v : %v : %v %v", err, remoteAddr, method, url)
+}
+
+// WriteBadRequestError write err to response
+func WriteBadRequestError(response *restful.Response) {
+	log.Printf("400: Bad Request")
+	response.WriteErrorString(http.StatusBadRequest, "Bad Request")
+}
+
+func WriteIllegalRequestError(response *restful.Response) {
+	response.AddHeader("Content-Type", "text/plain")
+	response.WriteErrorString(http.StatusBadRequest, "Bad Request")
+}
+
+//Writes and logs errors from the couchdb driver
+func WriteError(err error, response *restful.Response) {
+	var statusCode int
+	var reason string = "error"
+	//Is this a couchdb error?
+	cErr, ok := err.(*Error)
+	if ok { // Yes!
+		statusCode = cErr.StatusCode
+		reason = cErr.Reason
+	} else { // No, try to parse :(
+		str := err.Error()
+		errStrings := strings.Split(str, ":")
+		statusCode := 0
+		var cErr error
+		if len(errStrings) > 1 {
+			statusCode, cErr = strconv.Atoi(errStrings[1])
+			reason = http.StatusText(statusCode)
+		}
+		if cErr != nil || statusCode == 0 {
+			statusCode = 500
+		}
+	}
+	//Write the error to the response
+	response.WriteErrorString(statusCode, reason)
+	//Log the error
+	log.Printf("%v", err)
+}
+
+//GetAdminUser  Returns the Admin Credentials as a CurrentUserInfo
+func GetAdminUser() *CurrentUserInfo {
+	return &CurrentUserInfo{
+		Roles: []string{"admin"},
+		User: &User{
+			Roles: []string{"admin"},
+		},
+	}
 }
