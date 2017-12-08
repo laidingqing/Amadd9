@@ -1,111 +1,693 @@
-2017/12/07 16:44:12 Initializing registry connection.
-2017/12/07 16:44:13 Setting service registry config
-2017/12/07 16:44:13 Setting Key: EntryTTL, Value: 60
-2017/12/07 16:44:13 Setting Key: CacheRefreshInterval, Value: 75
-2017/12/07 16:44:13 Setting database config
-2017/12/07 16:44:13 Setting Key: DbHost, Value: localhost
-2017/12/07 16:44:13 Setting Key: DbAdminUser, Value: adminuser
-2017/12/07 16:44:13 Setting Key: DbAdminPassword, Value: password
-2017/12/07 16:44:13 Setting Key: DbTimeout, Value: 0
-2017/12/07 16:44:13 Setting Key: MainDb, Value: main_ut
-2017/12/07 16:44:13 Setting logger config
-2017/12/07 16:44:13 Setting Key: LogFile, Value: amadd9-service.log
-2017/12/07 16:44:13 Setting Key: MaxSize, Value: 10
-2017/12/07 16:44:13 Setting Key: MaxBackups, Value: 3
-2017/12/07 16:44:13 Setting Key: MaxAge, Value: 30
-2017/12/07 16:44:13 Setting auth config
-2017/12/07 16:44:13 Setting Key: Authenticator, Value: standard
-2017/12/07 16:44:13 Setting Key: SessionTimeout, Value: 6000
-2017/12/07 16:44:13 Setting Key: PersistentSessions, Value: true
-2017/12/07 16:44:13 Setting Key: AllowGuest, Value: true
-2017/12/07 16:44:13 Setting Key: AllowNewUserRegistration, Value: false
-2017/12/07 16:44:13 Setting Key: MinPasswordLength, Value: 6
-2017/12/07 16:44:13 Setting users config
-2017/12/07 16:44:13 Setting Key: AvatarDb, Value: user_avatars
-2017/12/07 16:44:13 Initializing registry connection.
-2017/12/07 16:44:13 Registering Config Service node at http://localhost:4140
-2017/12/07 16:44:13 Error fetching user services: No listed services!
-2017/12/07 16:44:13 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [36]
-2017/12/07 16:44:13 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [36]
-2017/12/07 16:45:28 Error fetching user services: No listed services!
-2017/12/07 16:45:28 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [38]
-2017/12/07 16:45:28 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [38]
-2017/12/07 16:46:49 Initializing registry connection.
-2017/12/07 16:46:49 Setting service registry config
-2017/12/07 16:46:49 Setting Key: EntryTTL, Value: 60
-2017/12/07 16:46:49 Setting Key: CacheRefreshInterval, Value: 75
-2017/12/07 16:46:49 Setting database config
-2017/12/07 16:46:49 Setting Key: DbHost, Value: localhost
-2017/12/07 16:46:49 Setting Key: DbAdminUser, Value: adminuser
-2017/12/07 16:46:49 Setting Key: DbAdminPassword, Value: password
-2017/12/07 16:46:49 Setting Key: DbTimeout, Value: 0
-2017/12/07 16:46:49 Setting Key: MainDb, Value: main_ut
-2017/12/07 16:46:49 Setting logger config
-2017/12/07 16:46:49 Setting Key: LogFile, Value: amadd9-service.log
-2017/12/07 16:46:49 Setting Key: MaxSize, Value: 10
-2017/12/07 16:46:49 Setting Key: MaxBackups, Value: 3
-2017/12/07 16:46:49 Setting Key: MaxAge, Value: 30
-2017/12/07 16:46:49 Setting auth config
-2017/12/07 16:46:49 Setting Key: Authenticator, Value: standard
-2017/12/07 16:46:49 Setting Key: SessionTimeout, Value: 6000
-2017/12/07 16:46:49 Setting Key: PersistentSessions, Value: true
-2017/12/07 16:46:49 Setting Key: AllowGuest, Value: true
-2017/12/07 16:46:49 Setting Key: AllowNewUserRegistration, Value: false
-2017/12/07 16:46:49 Setting Key: MinPasswordLength, Value: 6
-2017/12/07 16:46:50 Setting users config
-2017/12/07 16:46:50 Setting Key: AvatarDb, Value: user_avatars
-2017/12/07 16:46:50 Initializing registry connection.
-2017/12/07 16:46:50 Registering Config Service node at http://localhost:4140
-2017/12/07 16:46:50 Error fetching user services: No listed services!
-2017/12/07 16:46:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [60]
-2017/12/07 16:46:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [60]
-2017/12/07 16:48:05 Error fetching user services: No listed services!
-2017/12/07 16:48:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [62]
-2017/12/07 16:48:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [62]
-2017/12/07 16:49:20 Error fetching user services: No listed services!
-2017/12/07 16:49:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [64]
-2017/12/07 16:49:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [64]
-2017/12/07 16:50:35 Error fetching user services: No listed services!
-2017/12/07 16:50:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [67]
-2017/12/07 16:50:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [67]
-2017/12/07 16:51:50 Error fetching user services: No listed services!
-2017/12/07 16:51:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [69]
-2017/12/07 16:51:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [69]
-2017/12/07 16:53:05 Error fetching user services: No listed services!
-2017/12/07 16:53:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [72]
-2017/12/07 16:53:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [72]
-2017/12/07 16:54:20 Error fetching user services: No listed services!
-2017/12/07 16:54:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [74]
-2017/12/07 16:54:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [74]
-2017/12/07 16:55:35 Error fetching user services: No listed services!
-2017/12/07 16:55:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [77]
-2017/12/07 16:55:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [77]
-2017/12/07 16:56:50 Error fetching user services: No listed services!
-2017/12/07 16:56:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [79]
-2017/12/07 16:56:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [79]
-2017/12/07 16:58:05 Error fetching user services: No listed services!
-2017/12/07 16:58:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [82]
-2017/12/07 16:58:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [82]
-2017/12/07 16:59:20 Error fetching user services: No listed services!
-2017/12/07 16:59:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [84]
-2017/12/07 16:59:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [84]
-2017/12/07 17:00:35 Error fetching user services: No listed services!
-2017/12/07 17:00:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [87]
-2017/12/07 17:00:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [87]
-2017/12/07 17:01:50 Error fetching user services: No listed services!
-2017/12/07 17:01:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [89]
-2017/12/07 17:01:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [89]
-2017/12/07 17:03:05 Error fetching user services: No listed services!
-2017/12/07 17:03:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [92]
-2017/12/07 17:03:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [92]
-2017/12/07 17:14:10 Error fetching user services: No listed services!
-2017/12/07 17:14:10 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [96]
-2017/12/07 17:14:10 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [96]
-2017/12/07 17:14:10 Error fetching config services: No listed services!
-2017/12/07 17:24:42 Error fetching user services: No listed services!
-2017/12/07 17:24:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [100]
-2017/12/07 17:24:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [100]
-2017/12/07 17:25:57 Error fetching user services: No listed services!
-2017/12/07 17:25:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [102]
-2017/12/07 17:25:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [102]
-2017/12/07 17:26:28 Can't send Heartbeat to registry! - client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:25 Initializing registry connection.
+2017/12/08 10:35:25 Setting service registry config
+2017/12/08 10:35:25 Setting Key: EntryTTL, Value: 60
+2017/12/08 10:35:25 Error setting config EntryTTL: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:25 Setting Key: CacheRefreshInterval, Value: 75
+2017/12/08 10:35:26 Error setting config CacheRefreshInterval: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:26 Setting database config
+2017/12/08 10:35:26 Setting Key: DbHost, Value: localhost
+2017/12/08 10:35:26 Error setting config DbHost: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:26 Setting Key: DbAdminUser, Value: adminuser
+2017/12/08 10:35:26 Error setting config DbAdminUser: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:26 Setting Key: DbAdminPassword, Value: password
+2017/12/08 10:35:26 Error setting config DbAdminPassword: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:26 Setting Key: DbTimeout, Value: 0
+2017/12/08 10:35:26 Error setting config DbTimeout: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:26 Setting Key: MainDb, Value: main_ut
+2017/12/08 10:35:27 Error setting config MainDb: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:27 Setting logger config
+2017/12/08 10:35:27 Setting Key: LogFile, Value: amadd9-service.log
+2017/12/08 10:35:27 Error setting config LogFile: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:27 Setting Key: MaxSize, Value: 10
+2017/12/08 10:35:27 Error setting config MaxSize: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:27 Setting Key: MaxBackups, Value: 3
+2017/12/08 10:35:27 Error setting config MaxBackups: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:27 Setting Key: MaxAge, Value: 30
+2017/12/08 10:35:27 Error setting config MaxAge: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:27 Setting auth config
+2017/12/08 10:35:27 Setting Key: Authenticator, Value: standard
+2017/12/08 10:35:28 Error setting config Authenticator: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:28 Setting Key: SessionTimeout, Value: 6000
+2017/12/08 10:35:28 Error setting config SessionTimeout: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:28 Setting Key: PersistentSessions, Value: true
+2017/12/08 10:35:28 Error setting config PersistentSessions: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:28 Setting Key: AllowGuest, Value: true
+2017/12/08 10:35:28 Error setting config AllowGuest: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:28 Setting Key: AllowNewUserRegistration, Value: false
+2017/12/08 10:35:29 Error setting config AllowNewUserRegistration: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:29 Setting Key: MinPasswordLength, Value: 6
+2017/12/08 10:35:29 Error setting config MinPasswordLength: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:29 Setting users config
+2017/12/08 10:35:29 Setting Key: AvatarDb, Value: user_avatars
+2017/12/08 10:35:29 Error setting config AvatarDb: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:35:29 Register Controller..
+2017/12/08 10:35:29 Initializing registry connection.
+2017/12/08 10:35:29 Registering Config Service node at http://localhost:4140
+2017/12/08 10:35:29 client: etcd cluster is unavailable or misconfigured; error #0: dial tcp [::1]:2379: getsockopt: connection refused
+2017/12/08 10:43:35 Initializing registry connection.
+2017/12/08 10:43:35 Setting service registry config
+2017/12/08 10:43:35 Setting Key: EntryTTL, Value: 60
+2017/12/08 10:43:35 Setting Key: CacheRefreshInterval, Value: 75
+2017/12/08 10:43:35 Setting database config
+2017/12/08 10:43:35 Setting Key: DbHost, Value: localhost
+2017/12/08 10:43:35 Setting Key: DbAdminUser, Value: adminuser
+2017/12/08 10:43:35 Setting Key: DbAdminPassword, Value: password
+2017/12/08 10:43:35 Setting Key: DbTimeout, Value: 0
+2017/12/08 10:43:35 Setting Key: MainDb, Value: main_ut
+2017/12/08 10:43:35 Setting logger config
+2017/12/08 10:43:35 Setting Key: LogFile, Value: amadd9-service.log
+2017/12/08 10:43:35 Setting Key: MaxSize, Value: 10
+2017/12/08 10:43:35 Setting Key: MaxBackups, Value: 3
+2017/12/08 10:43:35 Setting Key: MaxAge, Value: 30
+2017/12/08 10:43:35 Setting auth config
+2017/12/08 10:43:35 Setting Key: Authenticator, Value: standard
+2017/12/08 10:43:35 Setting Key: SessionTimeout, Value: 6000
+2017/12/08 10:43:35 Setting Key: PersistentSessions, Value: true
+2017/12/08 10:43:35 Setting Key: AllowGuest, Value: true
+2017/12/08 10:43:35 Setting Key: AllowNewUserRegistration, Value: false
+2017/12/08 10:43:35 Setting Key: MinPasswordLength, Value: 6
+2017/12/08 10:43:35 Setting users config
+2017/12/08 10:43:35 Setting Key: AvatarDb, Value: user_avatars
+2017/12/08 10:43:35 Register Controller..
+2017/12/08 10:43:35 Initializing registry connection.
+2017/12/08 10:43:35 Registering Config Service node at http://localhost:4140
+2017/12/08 10:43:35 Error fetching user services: 100: Key not found (/amadd9/services/users) [22]
+2017/12/08 10:43:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [22]
+2017/12/08 10:43:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [22]
+2017/12/08 10:43:40 [API] [::1]:63125 : GET /api/v1/config/Auth/sessionTimeout
+2017/12/08 10:44:39 Initializing registry connection.
+2017/12/08 10:44:39 Setting service registry config
+2017/12/08 10:44:39 Setting Key: EntryTTL, Value: 60
+2017/12/08 10:44:39 Setting Key: CacheRefreshInterval, Value: 75
+2017/12/08 10:44:39 Setting database config
+2017/12/08 10:44:39 Setting Key: DbHost, Value: localhost
+2017/12/08 10:44:39 Setting Key: DbAdminUser, Value: adminuser
+2017/12/08 10:44:40 Setting Key: DbAdminPassword, Value: password
+2017/12/08 10:44:40 Setting Key: DbTimeout, Value: 0
+2017/12/08 10:44:40 Setting Key: MainDb, Value: main_ut
+2017/12/08 10:44:40 Setting logger config
+2017/12/08 10:44:40 Setting Key: LogFile, Value: amadd9-service.log
+2017/12/08 10:44:40 Setting Key: MaxSize, Value: 10
+2017/12/08 10:44:40 Setting Key: MaxBackups, Value: 3
+2017/12/08 10:44:40 Setting Key: MaxAge, Value: 30
+2017/12/08 10:44:40 Setting auth config
+2017/12/08 10:44:40 Setting Key: Authenticator, Value: standard
+2017/12/08 10:44:40 Setting Key: SessionTimeout, Value: 6000
+2017/12/08 10:44:40 Setting Key: PersistentSessions, Value: true
+2017/12/08 10:44:40 Setting Key: AllowGuest, Value: true
+2017/12/08 10:44:40 Setting Key: AllowNewUserRegistration, Value: false
+2017/12/08 10:44:40 Setting Key: MinPasswordLength, Value: 6
+2017/12/08 10:44:40 Setting users config
+2017/12/08 10:44:40 Setting Key: AvatarDb, Value: user_avatars
+2017/12/08 10:44:40 Register Controller..
+2017/12/08 10:44:40 Initializing registry connection.
+2017/12/08 10:44:40 Registering Config Service node at http://localhost:4140
+2017/12/08 10:44:40 Error fetching user services: 100: Key not found (/amadd9/services/users) [44]
+2017/12/08 10:44:40 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [44]
+2017/12/08 10:44:40 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [44]
+2017/12/08 10:44:59 [API] [::1]:63160 : GET /api/v1/config/Auth/sessionTimeout
+2017/12/08 10:45:55 Error fetching user services: 100: Key not found (/amadd9/services/users) [46]
+2017/12/08 10:45:55 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [46]
+2017/12/08 10:45:55 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [46]
+2017/12/08 10:47:10 Error fetching user services: 100: Key not found (/amadd9/services/users) [49]
+2017/12/08 10:47:10 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [49]
+2017/12/08 10:47:10 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [49]
+2017/12/08 10:47:13 Initializing registry connection.
+2017/12/08 10:47:13 Setting service registry config
+2017/12/08 10:47:13 Setting Key: EntryTTL, Value: 60
+2017/12/08 10:47:13 Setting Key: CacheRefreshInterval, Value: 75
+2017/12/08 10:47:13 Setting database config
+2017/12/08 10:47:13 Setting Key: DbHost, Value: localhost
+2017/12/08 10:47:13 Setting Key: DbAdminUser, Value: adminuser
+2017/12/08 10:47:13 Setting Key: DbAdminPassword, Value: password
+2017/12/08 10:47:13 Setting Key: DbTimeout, Value: 0
+2017/12/08 10:47:13 Setting Key: MainDb, Value: main_ut
+2017/12/08 10:47:13 Setting logger config
+2017/12/08 10:47:13 Setting Key: LogFile, Value: amadd9-service.log
+2017/12/08 10:47:13 Setting Key: MaxSize, Value: 10
+2017/12/08 10:47:13 Setting Key: MaxBackups, Value: 3
+2017/12/08 10:47:13 Setting Key: MaxAge, Value: 30
+2017/12/08 10:47:13 Setting auth config
+2017/12/08 10:47:13 Setting Key: Authenticator, Value: standard
+2017/12/08 10:47:13 Setting Key: SessionTimeout, Value: 6000
+2017/12/08 10:47:13 Setting Key: PersistentSessions, Value: true
+2017/12/08 10:47:13 Setting Key: AllowGuest, Value: true
+2017/12/08 10:47:13 Setting Key: AllowNewUserRegistration, Value: false
+2017/12/08 10:47:13 Setting Key: MinPasswordLength, Value: 6
+2017/12/08 10:47:13 Setting users config
+2017/12/08 10:47:13 Setting Key: AvatarDb, Value: user_avatars
+2017/12/08 10:47:13 Register Controller..
+2017/12/08 10:47:13 Initializing registry connection.
+2017/12/08 10:47:13 Registering Config Service node at http://localhost:4140
+2017/12/08 10:47:13 Error fetching user services: 100: Key not found (/amadd9/services/users) [69]
+2017/12/08 10:47:13 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [69]
+2017/12/08 10:47:13 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [69]
+2017/12/08 10:47:19 [API] [::1]:63310 : GET /api/v1/config/Auth/sessionTimeout
+2017/12/08 10:47:43 [API] [::1]:63310 : GET /api/v1/config/auth/sessionTimeout
+2017/12/08 10:48:28 Error fetching user services: 100: Key not found (/amadd9/services/users) [71]
+2017/12/08 10:48:28 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [71]
+2017/12/08 10:48:28 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [71]
+2017/12/08 10:49:43 Error fetching user services: 100: Key not found (/amadd9/services/users) [73]
+2017/12/08 10:49:43 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [73]
+2017/12/08 10:49:43 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [73]
+2017/12/08 10:50:23 [API] [::1]:63310 : GET /api/v1/config/auth/allowGuestAccess
+2017/12/08 10:50:58 Error fetching user services: 100: Key not found (/amadd9/services/users) [76]
+2017/12/08 10:50:58 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [76]
+2017/12/08 10:50:58 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [76]
+2017/12/08 10:52:13 Error fetching user services: 100: Key not found (/amadd9/services/users) [78]
+2017/12/08 10:52:13 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [78]
+2017/12/08 10:52:13 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [78]
+2017/12/08 10:53:28 Error fetching user services: 100: Key not found (/amadd9/services/users) [81]
+2017/12/08 10:53:28 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [81]
+2017/12/08 10:53:28 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [81]
+2017/12/08 10:54:43 Error fetching user services: 100: Key not found (/amadd9/services/users) [83]
+2017/12/08 10:54:43 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [83]
+2017/12/08 10:54:43 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [83]
+2017/12/08 10:55:58 Error fetching user services: 100: Key not found (/amadd9/services/users) [86]
+2017/12/08 10:55:58 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [86]
+2017/12/08 10:55:58 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [86]
+2017/12/08 10:57:13 Error fetching user services: 100: Key not found (/amadd9/services/users) [88]
+2017/12/08 10:57:13 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [88]
+2017/12/08 10:57:13 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [88]
+2017/12/08 10:58:28 Error fetching user services: 100: Key not found (/amadd9/services/users) [91]
+2017/12/08 10:58:28 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [91]
+2017/12/08 10:58:28 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [91]
+2017/12/08 10:59:43 Error fetching user services: 100: Key not found (/amadd9/services/users) [93]
+2017/12/08 10:59:43 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [93]
+2017/12/08 10:59:43 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [93]
+2017/12/08 11:00:58 Error fetching user services: 100: Key not found (/amadd9/services/users) [96]
+2017/12/08 11:00:58 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [96]
+2017/12/08 11:00:58 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [96]
+2017/12/08 11:10:14 Initializing registry connection.
+2017/12/08 11:10:14 Setting service registry config
+2017/12/08 11:10:14 Setting Key: EntryTTL, Value: 60
+2017/12/08 11:10:14 Setting Key: CacheRefreshInterval, Value: 75
+2017/12/08 11:10:14 Setting database config
+2017/12/08 11:10:14 Setting Key: DbHost, Value: localhost
+2017/12/08 11:10:14 Setting Key: DbAdminUser, Value: adminuser
+2017/12/08 11:10:14 Setting Key: DbAdminPassword, Value: password
+2017/12/08 11:10:14 Setting Key: DbTimeout, Value: 0
+2017/12/08 11:10:14 Setting Key: MainDb, Value: main_ut
+2017/12/08 11:10:14 Setting logger config
+2017/12/08 11:10:14 Setting Key: LogFile, Value: amadd9-service.log
+2017/12/08 11:10:14 Setting Key: MaxSize, Value: 10
+2017/12/08 11:10:14 Setting Key: MaxBackups, Value: 3
+2017/12/08 11:10:14 Setting Key: MaxAge, Value: 30
+2017/12/08 11:10:14 Setting auth config
+2017/12/08 11:10:14 Setting Key: Authenticator, Value: standard
+2017/12/08 11:10:14 Setting Key: SessionTimeout, Value: 6000
+2017/12/08 11:10:14 Setting Key: PersistentSessions, Value: true
+2017/12/08 11:10:14 Setting Key: AllowGuest, Value: true
+2017/12/08 11:10:14 Setting Key: AllowNewUserRegistration, Value: false
+2017/12/08 11:10:14 Setting Key: MinPasswordLength, Value: 6
+2017/12/08 11:10:14 Setting users config
+2017/12/08 11:10:14 Setting Key: AvatarDb, Value: user_avatars
+2017/12/08 11:10:14 Register Controller..
+2017/12/08 11:10:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [138]
+2017/12/08 11:10:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [138]
+2017/12/08 11:11:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [143]
+2017/12/08 11:11:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [143]
+2017/12/08 11:12:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [148]
+2017/12/08 11:12:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [148]
+2017/12/08 11:13:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [153]
+2017/12/08 11:13:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [153]
+2017/12/08 11:15:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [158]
+2017/12/08 11:15:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [158]
+2017/12/08 11:16:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [163]
+2017/12/08 11:16:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [163]
+2017/12/08 11:17:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [167]
+2017/12/08 11:17:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [167]
+2017/12/08 11:18:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [173]
+2017/12/08 11:18:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [173]
+2017/12/08 11:20:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [177]
+2017/12/08 11:20:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [177]
+2017/12/08 11:21:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [183]
+2017/12/08 11:21:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [183]
+2017/12/08 11:22:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [188]
+2017/12/08 11:22:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [188]
+2017/12/08 11:23:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [193]
+2017/12/08 11:23:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [193]
+2017/12/08 11:25:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [198]
+2017/12/08 11:25:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [198]
+2017/12/08 11:26:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [203]
+2017/12/08 11:26:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [203]
+2017/12/08 11:27:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [208]
+2017/12/08 11:27:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [208]
+2017/12/08 11:28:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [213]
+2017/12/08 11:28:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [213]
+2017/12/08 11:30:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [218]
+2017/12/08 11:30:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [218]
+2017/12/08 11:31:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [223]
+2017/12/08 11:31:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [223]
+2017/12/08 11:32:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [228]
+2017/12/08 11:32:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [228]
+2017/12/08 11:33:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [233]
+2017/12/08 11:33:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [233]
+2017/12/08 11:35:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [238]
+2017/12/08 11:35:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [238]
+2017/12/08 11:36:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [243]
+2017/12/08 11:36:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [243]
+2017/12/08 11:37:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [248]
+2017/12/08 11:37:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [248]
+2017/12/08 11:38:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [253]
+2017/12/08 11:38:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [253]
+2017/12/08 11:40:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [258]
+2017/12/08 11:40:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [258]
+2017/12/08 11:41:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [263]
+2017/12/08 11:41:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [263]
+2017/12/08 11:42:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [268]
+2017/12/08 11:42:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [268]
+2017/12/08 11:43:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [273]
+2017/12/08 11:43:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [273]
+2017/12/08 11:45:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [278]
+2017/12/08 11:45:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [278]
+2017/12/08 11:46:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [284]
+2017/12/08 11:46:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [284]
+2017/12/08 11:47:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [288]
+2017/12/08 11:47:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [288]
+2017/12/08 11:48:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [294]
+2017/12/08 11:48:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [294]
+2017/12/08 11:50:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [298]
+2017/12/08 11:50:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [298]
+2017/12/08 11:51:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [304]
+2017/12/08 11:51:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [304]
+2017/12/08 11:52:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [308]
+2017/12/08 11:52:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [308]
+2017/12/08 11:53:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [314]
+2017/12/08 11:53:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [314]
+2017/12/08 11:55:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [319]
+2017/12/08 11:55:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [319]
+2017/12/08 11:56:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [325]
+2017/12/08 11:56:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [325]
+2017/12/08 11:57:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [329]
+2017/12/08 11:57:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [329]
+2017/12/08 11:58:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [335]
+2017/12/08 11:58:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [335]
+2017/12/08 12:00:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [340]
+2017/12/08 12:00:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [340]
+2017/12/08 12:01:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [345]
+2017/12/08 12:01:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [345]
+2017/12/08 12:02:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [350]
+2017/12/08 12:02:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [350]
+2017/12/08 12:03:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [356]
+2017/12/08 12:03:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [356]
+2017/12/08 12:05:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [360]
+2017/12/08 12:05:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [360]
+2017/12/08 12:06:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [366]
+2017/12/08 12:06:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [366]
+2017/12/08 12:07:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [370]
+2017/12/08 12:07:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [370]
+2017/12/08 12:08:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [376]
+2017/12/08 12:08:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [376]
+2017/12/08 12:10:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [380]
+2017/12/08 12:10:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [380]
+2017/12/08 12:11:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [386]
+2017/12/08 12:11:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [386]
+2017/12/08 12:12:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [390]
+2017/12/08 12:12:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [390]
+2017/12/08 12:13:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [396]
+2017/12/08 12:13:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [396]
+2017/12/08 12:15:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [400]
+2017/12/08 12:15:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [400]
+2017/12/08 12:16:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [406]
+2017/12/08 12:16:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [406]
+2017/12/08 12:17:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [410]
+2017/12/08 12:17:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [410]
+2017/12/08 12:18:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [416]
+2017/12/08 12:18:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [416]
+2017/12/08 12:20:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [420]
+2017/12/08 12:20:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [420]
+2017/12/08 12:21:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [426]
+2017/12/08 12:21:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [426]
+2017/12/08 12:22:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [430]
+2017/12/08 12:22:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [430]
+2017/12/08 12:23:59 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [436]
+2017/12/08 12:23:59 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [436]
+2017/12/08 12:25:14 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [440]
+2017/12/08 12:25:14 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [440]
+2017/12/08 12:26:29 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [446]
+2017/12/08 12:26:29 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [446]
+2017/12/08 12:27:44 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [450]
+2017/12/08 12:27:44 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [450]
+2017/12/08 12:38:15 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [458]
+2017/12/08 12:38:15 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [458]
+2017/12/08 12:48:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [464]
+2017/12/08 12:48:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [464]
+2017/12/08 12:49:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [470]
+2017/12/08 12:49:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [470]
+2017/12/08 12:50:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [474]
+2017/12/08 12:50:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [474]
+2017/12/08 12:51:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [480]
+2017/12/08 12:51:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [480]
+2017/12/08 12:53:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [484]
+2017/12/08 12:53:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [484]
+2017/12/08 12:54:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [490]
+2017/12/08 12:54:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [490]
+2017/12/08 12:55:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [494]
+2017/12/08 12:55:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [494]
+2017/12/08 12:56:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [500]
+2017/12/08 12:56:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [500]
+2017/12/08 12:58:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [504]
+2017/12/08 12:58:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [504]
+2017/12/08 12:59:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [510]
+2017/12/08 12:59:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [510]
+2017/12/08 13:00:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [514]
+2017/12/08 13:00:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [514]
+2017/12/08 13:01:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [520]
+2017/12/08 13:01:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [520]
+2017/12/08 13:03:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [524]
+2017/12/08 13:03:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [524]
+2017/12/08 13:04:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [530]
+2017/12/08 13:04:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [530]
+2017/12/08 13:05:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [534]
+2017/12/08 13:05:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [534]
+2017/12/08 13:06:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [540]
+2017/12/08 13:06:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [540]
+2017/12/08 13:08:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [544]
+2017/12/08 13:08:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [544]
+2017/12/08 13:09:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [550]
+2017/12/08 13:09:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [550]
+2017/12/08 13:10:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [554]
+2017/12/08 13:10:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [554]
+2017/12/08 13:11:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [560]
+2017/12/08 13:11:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [560]
+2017/12/08 13:13:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [564]
+2017/12/08 13:13:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [564]
+2017/12/08 13:14:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [570]
+2017/12/08 13:14:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [570]
+2017/12/08 13:15:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [574]
+2017/12/08 13:15:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [574]
+2017/12/08 13:16:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [580]
+2017/12/08 13:16:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [580]
+2017/12/08 13:18:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [584]
+2017/12/08 13:18:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [584]
+2017/12/08 13:19:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [590]
+2017/12/08 13:19:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [590]
+2017/12/08 13:20:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [594]
+2017/12/08 13:20:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [594]
+2017/12/08 13:21:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [600]
+2017/12/08 13:21:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [600]
+2017/12/08 13:23:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [604]
+2017/12/08 13:23:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [604]
+2017/12/08 13:24:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [610]
+2017/12/08 13:24:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [610]
+2017/12/08 13:25:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [614]
+2017/12/08 13:25:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [614]
+2017/12/08 13:26:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [620]
+2017/12/08 13:26:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [620]
+2017/12/08 13:28:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [624]
+2017/12/08 13:28:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [624]
+2017/12/08 13:29:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [630]
+2017/12/08 13:29:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [630]
+2017/12/08 13:30:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [634]
+2017/12/08 13:30:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [634]
+2017/12/08 13:31:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [640]
+2017/12/08 13:31:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [640]
+2017/12/08 13:33:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [644]
+2017/12/08 13:33:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [644]
+2017/12/08 13:34:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [650]
+2017/12/08 13:34:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [650]
+2017/12/08 13:35:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [654]
+2017/12/08 13:35:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [654]
+2017/12/08 13:36:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [660]
+2017/12/08 13:36:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [660]
+2017/12/08 13:38:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [664]
+2017/12/08 13:38:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [664]
+2017/12/08 13:39:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [670]
+2017/12/08 13:39:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [670]
+2017/12/08 13:40:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [674]
+2017/12/08 13:40:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [674]
+2017/12/08 13:41:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [680]
+2017/12/08 13:41:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [680]
+2017/12/08 13:43:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [684]
+2017/12/08 13:43:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [684]
+2017/12/08 13:44:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [690]
+2017/12/08 13:44:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [690]
+2017/12/08 13:45:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [694]
+2017/12/08 13:45:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [694]
+2017/12/08 13:46:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [700]
+2017/12/08 13:46:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [700]
+2017/12/08 13:48:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [704]
+2017/12/08 13:48:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [704]
+2017/12/08 13:49:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [710]
+2017/12/08 13:49:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [710]
+2017/12/08 13:50:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [714]
+2017/12/08 13:50:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [714]
+2017/12/08 13:51:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [720]
+2017/12/08 13:51:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [720]
+2017/12/08 13:53:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [724]
+2017/12/08 13:53:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [724]
+2017/12/08 13:54:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [730]
+2017/12/08 13:54:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [730]
+2017/12/08 13:55:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [734]
+2017/12/08 13:55:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [734]
+2017/12/08 13:56:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [740]
+2017/12/08 13:56:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [740]
+2017/12/08 13:58:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [744]
+2017/12/08 13:58:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [744]
+2017/12/08 13:59:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [750]
+2017/12/08 13:59:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [750]
+2017/12/08 14:00:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [754]
+2017/12/08 14:00:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [754]
+2017/12/08 14:01:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [760]
+2017/12/08 14:01:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [760]
+2017/12/08 14:03:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [764]
+2017/12/08 14:03:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [764]
+2017/12/08 14:04:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [770]
+2017/12/08 14:04:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [770]
+2017/12/08 14:05:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [774]
+2017/12/08 14:05:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [774]
+2017/12/08 14:06:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [780]
+2017/12/08 14:06:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [780]
+2017/12/08 14:08:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [784]
+2017/12/08 14:08:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [784]
+2017/12/08 14:09:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [790]
+2017/12/08 14:09:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [790]
+2017/12/08 14:10:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [794]
+2017/12/08 14:10:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [794]
+2017/12/08 14:11:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [800]
+2017/12/08 14:11:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [800]
+2017/12/08 14:13:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [804]
+2017/12/08 14:13:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [804]
+2017/12/08 14:14:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [810]
+2017/12/08 14:14:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [810]
+2017/12/08 14:15:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [814]
+2017/12/08 14:15:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [814]
+2017/12/08 14:16:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [820]
+2017/12/08 14:16:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [820]
+2017/12/08 14:18:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [824]
+2017/12/08 14:18:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [824]
+2017/12/08 14:19:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [830]
+2017/12/08 14:19:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [830]
+2017/12/08 14:20:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [834]
+2017/12/08 14:20:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [834]
+2017/12/08 14:21:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [840]
+2017/12/08 14:21:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [840]
+2017/12/08 14:23:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [845]
+2017/12/08 14:23:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [845]
+2017/12/08 14:24:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [851]
+2017/12/08 14:24:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [851]
+2017/12/08 14:25:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [855]
+2017/12/08 14:25:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [855]
+2017/12/08 14:26:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [861]
+2017/12/08 14:26:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [861]
+2017/12/08 14:28:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [865]
+2017/12/08 14:28:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [865]
+2017/12/08 14:29:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [871]
+2017/12/08 14:29:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [871]
+2017/12/08 14:30:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [875]
+2017/12/08 14:30:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [875]
+2017/12/08 14:31:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [881]
+2017/12/08 14:31:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [881]
+2017/12/08 14:33:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [885]
+2017/12/08 14:33:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [885]
+2017/12/08 14:34:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [891]
+2017/12/08 14:34:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [891]
+2017/12/08 14:35:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [895]
+2017/12/08 14:35:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [895]
+2017/12/08 14:36:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [901]
+2017/12/08 14:36:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [901]
+2017/12/08 14:38:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [905]
+2017/12/08 14:38:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [905]
+2017/12/08 14:39:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [911]
+2017/12/08 14:39:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [911]
+2017/12/08 14:40:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [915]
+2017/12/08 14:40:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [915]
+2017/12/08 14:41:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [921]
+2017/12/08 14:41:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [921]
+2017/12/08 14:43:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [925]
+2017/12/08 14:43:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [925]
+2017/12/08 14:44:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [931]
+2017/12/08 14:44:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [931]
+2017/12/08 14:45:35 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [935]
+2017/12/08 14:45:35 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [935]
+2017/12/08 14:46:50 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [941]
+2017/12/08 14:46:50 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [941]
+2017/12/08 14:48:05 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [945]
+2017/12/08 14:48:05 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [945]
+2017/12/08 14:49:20 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [951]
+2017/12/08 14:49:20 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [951]
+2017/12/08 14:52:48 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [957]
+2017/12/08 14:52:48 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [957]
+2017/12/08 15:02:41 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [965]
+2017/12/08 15:02:41 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [965]
+2017/12/08 15:03:56 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [969]
+2017/12/08 15:03:56 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [969]
+2017/12/08 15:05:11 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [975]
+2017/12/08 15:05:11 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [975]
+2017/12/08 15:06:26 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [979]
+2017/12/08 15:06:26 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [979]
+2017/12/08 15:07:41 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [985]
+2017/12/08 15:07:41 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [985]
+2017/12/08 15:08:56 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [989]
+2017/12/08 15:08:56 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [989]
+2017/12/08 15:10:11 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [995]
+2017/12/08 15:10:11 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [995]
+2017/12/08 15:11:26 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [999]
+2017/12/08 15:11:26 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [999]
+2017/12/08 15:12:41 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1005]
+2017/12/08 15:12:41 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1005]
+2017/12/08 15:13:56 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1009]
+2017/12/08 15:13:56 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1009]
+2017/12/08 15:15:11 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1015]
+2017/12/08 15:15:11 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1015]
+2017/12/08 15:16:26 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1019]
+2017/12/08 15:16:26 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1019]
+2017/12/08 15:17:41 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1025]
+2017/12/08 15:17:41 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1025]
+2017/12/08 15:18:56 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1029]
+2017/12/08 15:18:56 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1029]
+2017/12/08 15:20:11 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1035]
+2017/12/08 15:20:11 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1035]
+2017/12/08 15:21:26 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1039]
+2017/12/08 15:21:26 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1039]
+2017/12/08 15:22:41 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1045]
+2017/12/08 15:22:41 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1045]
+2017/12/08 15:23:56 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1049]
+2017/12/08 15:23:56 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1049]
+2017/12/08 15:25:11 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1055]
+2017/12/08 15:25:11 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1055]
+2017/12/08 15:26:26 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1059]
+2017/12/08 15:26:26 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1059]
+2017/12/08 15:27:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1065]
+2017/12/08 15:27:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1065]
+2017/12/08 15:28:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1069]
+2017/12/08 15:28:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1069]
+2017/12/08 15:30:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1075]
+2017/12/08 15:30:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1075]
+2017/12/08 15:31:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1079]
+2017/12/08 15:31:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1079]
+2017/12/08 15:32:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1085]
+2017/12/08 15:32:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1085]
+2017/12/08 15:33:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1089]
+2017/12/08 15:33:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1089]
+2017/12/08 15:35:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1095]
+2017/12/08 15:35:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1095]
+2017/12/08 15:36:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1099]
+2017/12/08 15:36:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1099]
+2017/12/08 15:37:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1105]
+2017/12/08 15:37:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1105]
+2017/12/08 15:38:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1109]
+2017/12/08 15:38:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1109]
+2017/12/08 15:40:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1115]
+2017/12/08 15:40:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1115]
+2017/12/08 15:41:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1119]
+2017/12/08 15:41:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1119]
+2017/12/08 15:42:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1125]
+2017/12/08 15:42:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1125]
+2017/12/08 15:43:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1129]
+2017/12/08 15:43:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1129]
+2017/12/08 15:45:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1135]
+2017/12/08 15:45:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1135]
+2017/12/08 15:46:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1139]
+2017/12/08 15:46:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1139]
+2017/12/08 15:47:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1145]
+2017/12/08 15:47:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1145]
+2017/12/08 15:48:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1149]
+2017/12/08 15:48:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1149]
+2017/12/08 15:50:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1155]
+2017/12/08 15:50:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1155]
+2017/12/08 15:51:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1159]
+2017/12/08 15:51:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1159]
+2017/12/08 15:52:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1165]
+2017/12/08 15:52:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1165]
+2017/12/08 15:53:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1169]
+2017/12/08 15:53:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1169]
+2017/12/08 15:55:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1175]
+2017/12/08 15:55:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1175]
+2017/12/08 15:56:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1179]
+2017/12/08 15:56:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1179]
+2017/12/08 15:57:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1185]
+2017/12/08 15:57:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1185]
+2017/12/08 15:58:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1189]
+2017/12/08 15:58:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1189]
+2017/12/08 16:00:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1195]
+2017/12/08 16:00:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1195]
+2017/12/08 16:01:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1199]
+2017/12/08 16:01:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1199]
+2017/12/08 16:02:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1205]
+2017/12/08 16:02:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1205]
+2017/12/08 16:03:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1209]
+2017/12/08 16:03:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1209]
+2017/12/08 16:05:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1215]
+2017/12/08 16:05:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1215]
+2017/12/08 16:06:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1219]
+2017/12/08 16:06:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1219]
+2017/12/08 16:07:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1225]
+2017/12/08 16:07:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1225]
+2017/12/08 16:08:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1229]
+2017/12/08 16:08:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1229]
+2017/12/08 16:10:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1235]
+2017/12/08 16:10:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1235]
+2017/12/08 16:11:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1239]
+2017/12/08 16:11:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1239]
+2017/12/08 16:12:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1245]
+2017/12/08 16:12:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1245]
+2017/12/08 16:13:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1249]
+2017/12/08 16:13:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1249]
+2017/12/08 16:15:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1255]
+2017/12/08 16:15:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1255]
+2017/12/08 16:16:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1259]
+2017/12/08 16:16:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1259]
+2017/12/08 16:17:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1265]
+2017/12/08 16:17:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1265]
+2017/12/08 16:18:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1269]
+2017/12/08 16:18:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1269]
+2017/12/08 16:20:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1275]
+2017/12/08 16:20:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1275]
+2017/12/08 16:21:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1279]
+2017/12/08 16:21:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1279]
+2017/12/08 16:22:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1285]
+2017/12/08 16:22:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1285]
+2017/12/08 16:23:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1289]
+2017/12/08 16:23:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1289]
+2017/12/08 16:25:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1295]
+2017/12/08 16:25:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1295]
+2017/12/08 16:26:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1299]
+2017/12/08 16:26:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1299]
+2017/12/08 16:27:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1305]
+2017/12/08 16:27:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1305]
+2017/12/08 16:28:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1309]
+2017/12/08 16:28:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1309]
+2017/12/08 16:30:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1315]
+2017/12/08 16:30:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1315]
+2017/12/08 16:31:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1319]
+2017/12/08 16:31:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1319]
+2017/12/08 16:32:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1325]
+2017/12/08 16:32:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1325]
+2017/12/08 16:33:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1329]
+2017/12/08 16:33:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1329]
+2017/12/08 16:35:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1335]
+2017/12/08 16:35:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1335]
+2017/12/08 16:36:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1339]
+2017/12/08 16:36:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1339]
+2017/12/08 16:37:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1345]
+2017/12/08 16:37:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1345]
+2017/12/08 16:38:57 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1349]
+2017/12/08 16:38:57 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1349]
+2017/12/08 16:40:12 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1355]
+2017/12/08 16:40:12 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1355]
+2017/12/08 16:41:27 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1359]
+2017/12/08 16:41:27 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1359]
+2017/12/08 16:42:42 Error fetching wiki services: 100: Key not found (/amadd9/services/wikis) [1365]
+2017/12/08 16:42:42 Error fetching auth services: 100: Key not found (/amadd9/services/auth) [1365]

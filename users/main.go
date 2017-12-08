@@ -23,8 +23,8 @@ func main() {
 	})
 	config.InitEtcd()
 	config.FetchCommonConfig()
-	config.FetchServiceSection(config.UserService)
-	config.FetchServiceSection(config.AuthService)
+	// config.FetchServiceSection(config.UserService)
+	// config.FetchServiceSection(config.AuthService)
 	log.SetOutput(&lumberjack.Logger{
 		Filename:   config.Logger.LogFile,
 		MaxSize:    config.Logger.MaxSize,
@@ -38,7 +38,7 @@ func main() {
 	uc := user_service.UsersController{}
 	uc.Register(wsContainer)
 	database.InitDb()
-	registry.Init("Users", registry.UsersLocation)
+	registry.Init(registry.UsersEndpointName(), registry.UsersLocation)
 	httpAddr := ":" + config.Service.Port
 	if config.Service.UseSSL == true {
 		certFile := config.Service.SSLCertFile

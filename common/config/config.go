@@ -87,7 +87,7 @@ func LoadDefaults() {
 	Auth.SessionTimeout = 600
 	Auth.PersistentSessions = true
 	Auth.AllowGuest = true
-	Auth.AllowNewUserRegistration = false
+	Auth.AllowNewUserRegistration = true
 	Auth.MinPasswordLength = 6
 	Users.AvatarDb = "avatar_ut"
 }

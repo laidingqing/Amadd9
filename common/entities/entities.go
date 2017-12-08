@@ -28,6 +28,7 @@ type User struct {
 	ID             bson.ObjectId `bson:"_id" json:"id"`
 	UserName       string        `bson:"name" json:"name"`
 	Password       string        `bson:"password" json:"password,omitempty"`
+	Slat           string        `bson:"slat" json:"-"`
 	Roles          []string      `bson:"roles" json:"roles"`
 	Type           string        `bson:"type" json:"type"`
 	CreatedAt      time.Time     `bson:"createdAt" json:"createdAt,omitempty"`

@@ -1,6 +1,7 @@
 package services
 
 import (
+	"errors"
 	"log"
 	"net/http"
 	"strconv"
@@ -9,7 +10,7 @@ import (
 	restful "github.com/emicklei/go-restful"
 	"github.com/laidingqing/amadd9/common/config"
 	. "github.com/laidingqing/amadd9/common/entities"
-	. "github.com/laidingqing/amadd9/common/err"
+	couchdb "github.com/rhinoman/couchdb-go"
 )
 
 // Controller ..
@@ -82,12 +83,19 @@ func WriteIllegalRequestError(response *restful.Response) {
 	response.WriteErrorString(http.StatusBadRequest, "Bad Request")
 }
 
+//WriteServerError , Writes an internal server error
+func WriteServerError(err error, response *restful.Response) {
+	log.Printf("%v", err)
+	response.AddHeader("Content-Type", "text/plain")
+	response.WriteErrorString(http.StatusInternalServerError, err.Error())
+}
+
 //Writes and logs errors from the couchdb driver
 func WriteError(err error, response *restful.Response) {
 	var statusCode int
 	var reason string = "error"
 	//Is this a couchdb error?
-	cErr, ok := err.(*Error)
+	cErr, ok := err.(*couchdb.Error)
 	if ok { // Yes!
 		statusCode = cErr.StatusCode
 		reason = cErr.Reason
@@ -110,7 +118,7 @@ func WriteError(err error, response *restful.Response) {
 	log.Printf("%v", err)
 }
 
-//GetAdminUser  Returns the Admin Credentials as a CurrentUserInfo
+//GetAdminUser , Returns the Admin Credentials as a CurrentUserInfo
 func GetAdminUser() *CurrentUserInfo {
 	return &CurrentUserInfo{
 		Roles: []string{"admin"},
@@ -119,3 +127,44 @@ func GetAdminUser() *CurrentUserInfo {
 		},
 	}
 }
+
+// GetCurrentUser , Get current session user.
+func GetCurrentUser(request *restful.Request, response *restful.Response) *CurrentUserInfo {
+	curUser, ok := request.Attribute("currentUser").(*CurrentUserInfo)
+	if ok == false || curUser == nil {
+		return nil
+	} else {
+		return curUser
+	}
+}
+
+//Unauthenticated , Writes unauthenticated error to response
+func Unauthenticated(request *restful.Request, response *restful.Response) {
+	LogError(request, response, errors.New("Unauthenticated"))
+	response.AddHeader("Content-Type", "text/plain")
+	response.WriteErrorString(401, "Unauthenticated")
+}
+
+// func AuthUser(request *restful.Request, resp *restful.Response, chain *restful.FilterChain) {
+// 	cAuth, err := GetAuth(request.Request)
+// 	if err == http.ErrNoCookie && config.Auth.AllowGuest {
+// 		cAuth = &couchdb.BasicAuth{
+// 			Username: "guest",
+// 			Password: "guest",
+// 		}
+// 	} else if err != nil {
+// 		Unauthenticated(request, resp)
+// 		return
+// 	}
+// 	userInfo, err := GetUserFromAuth(cAuth)
+// 	if err != nil {
+// 		Unauthenticated(request, resp)
+// 		return
+// 	}
+// 	cui := &CurrentUserInfo{
+// 		Auth: cAuth,
+// 		User: userInfo,
+// 	}
+// 	request.SetAttribute("currentUser", cui)
+// 	chain.ProcessFilter(request, resp)
+// }

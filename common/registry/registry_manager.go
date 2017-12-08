@@ -55,7 +55,7 @@ func hostUrl() string {
 }
 
 func Init(serviceName, registryLocation string) error {
-	log.Print("Initializing registry connection.")
+	log.Println("Initializing registry connection.")
 	nodeID := config.Service.NodeId
 	ttl = time.Duration(config.ServiceRegistry.EntryTTL) * time.Second
 	cfg := etcd.Config{
@@ -68,7 +68,7 @@ func Init(serviceName, registryLocation string) error {
 		return err
 	}
 	kapi = etcd.NewKeysAPI(client)
-	log.Print("Registering " + serviceName + " Service node at " + hostUrl())
+	log.Println("Registering " + serviceName + " Service node at " + hostUrl())
 	if _, err := kapi.Set(context.Background(), registryLocation+nodeID, hostUrl(),
 		&etcd.SetOptions{TTL: ttl}); err != nil {
 		fmt.Println(err)
@@ -117,14 +117,14 @@ func fetchServiceLists() {
 	if err != nil {
 		log.Println("Error fetching user services: " + err.Error())
 	}
-	wikiNodes, err := getServiceNodes(WikisLocation)
-	if err != nil {
-		log.Println("Error fetching wiki services: " + err.Error())
-	}
-	authNodes, err := getServiceNodes(AuthLocation)
-	if err != nil {
-		log.Println("Error fetching auth services: " + err.Error())
-	}
+	// wikiNodes, err := getServiceNodes(WikisLocation)
+	// if err != nil {
+	// 	log.Println("Error fetching wiki services: " + err.Error())
+	// }
+	// authNodes, err := getServiceNodes(AuthLocation)
+	// if err != nil {
+	// 	log.Println("Error fetching auth services: " + err.Error())
+	// }
 	configNodes, err := getServiceNodes(ConfigServiceLocation)
 	if err != nil {
 		log.Println("Error fetching config services: " + err.Error())
@@ -132,9 +132,10 @@ func fetchServiceLists() {
 	serviceCache.Lock()
 	defer serviceCache.Unlock()
 	serviceCache.m["users"] = userNodes
-	serviceCache.m["wikis"] = wikiNodes
-	serviceCache.m["auth"] = authNodes
+	// serviceCache.m["wikis"] = wikiNodes
+	// serviceCache.m["auth"] = authNodes
 	serviceCache.m["config"] = configNodes
+
 }
 
 //Read nodes from an etcd response

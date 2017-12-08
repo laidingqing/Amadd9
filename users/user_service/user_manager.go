@@ -3,13 +3,15 @@ package user_service
 import (
 	"log"
 
+	. "github.com/laidingqing/amadd9/common/auth"
 	"github.com/laidingqing/amadd9/common/config"
 	. "github.com/laidingqing/amadd9/common/database"
 	. "github.com/laidingqing/amadd9/common/entities"
-	. "github.com/laidingqing/amadd9/common/err"
 	"github.com/laidingqing/amadd9/common/services"
 	"github.com/laidingqing/amadd9/common/util"
+	couchdb "github.com/rhinoman/couchdb-go"
 	mgo "gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2/bson"
 )
 
 var (
@@ -41,6 +43,8 @@ func (um *UserManager) Create(newUser *User, curUser *CurrentUserInfo) (string, 
 		return "", NotAdminError()
 	}
 	query := func(c *mgo.Collection) error {
+		newUser.ID = bson.NewObjectId()
+		newUser.Password = CalculatePassHash(newUser.Password, newUser.UserName)
 		return c.Insert(newUser)
 	}
 
@@ -53,7 +57,7 @@ func (um *UserManager) Create(newUser *User, curUser *CurrentUserInfo) (string, 
 func (um *UserManager) validateUser(user *User) error {
 	var err error
 	if len(user.UserName) < 3 || len(user.UserName) > 80 {
-		err = &Error{
+		err = &couchdb.Error{
 			StatusCode: 400,
 			Reason:     "Username invalid",
 		}
@@ -64,7 +68,7 @@ func (um *UserManager) validateUser(user *User) error {
 //Validate Password
 func (um *UserManager) validatePassword(password string) error {
 	if len(password) < config.Auth.MinPasswordLength {
-		return &Error{
+		return &couchdb.Error{
 			StatusCode: 400,
 			Reason:     "Password too short",
 		}

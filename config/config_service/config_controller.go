@@ -1,7 +1,10 @@
 package config_service
 
 import (
+	"log"
+
 	"github.com/emicklei/go-restful"
+	. "github.com/laidingqing/amadd9/common/logger"
 	. "github.com/laidingqing/amadd9/common/services"
 )
 
@@ -42,7 +45,7 @@ func (cc ConfigController) Register(container *restful.Container) {
 		ApiVersion(ApiVersion()).
 		Consumes(restful.MIME_JSON).
 		Produces(restful.MIME_JSON)
-
+	log.Printf("Register Controller..")
 	configWebService.Route(configWebService.GET("/{section}/{parameter}").To(cc.getConfigParam).
 		Doc("Get a single configuration parameter value").
 		Operation("getConfigParam").
@@ -58,6 +61,10 @@ func (cc ConfigController) getConfigParam(request *restful.Request,
 	response *restful.Response) {
 	section := request.PathParameter("section")
 	param := request.PathParameter("parameter")
+
+	log := NewLogger()
+	log.Log("section", section, "param", param)
+
 	value, err := new(ConfigManager).getConfigParam(section, param)
 	if err != nil {
 		WriteIllegalRequestError(response)

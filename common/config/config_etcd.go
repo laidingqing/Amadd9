@@ -64,8 +64,7 @@ func InitEtcd() {
 
 // FetchCommonConfig . Fetch common configuration from etcd
 func FetchCommonConfig() {
-	log.Printf("\nFetching Configuration from %v\n", Service.RegistryLocation)
-
+	log.Printf("Fetching Configuration from %v", Service.RegistryLocation)
 	// 'common' sections from etcd
 	fetchConfigSection(&Database, DbConfigLocation, kapi)
 	fetchConfigSection(&Logger, LogConfigLocation, kapi)
