@@ -53,10 +53,35 @@ func (um *UserManager) Create(newUser *User, curUser *CurrentUserInfo) (string, 
 	return newUser.ID.Hex(), err
 }
 
+//findByUsername find a user
+func (um *UserManager) checkUserByUsername(theUser *User) (string, error) {
+	err := um.validateUser(theUser)
+	if err != nil {
+		return "", err
+	}
+	var isUser User
+	query := func(c *mgo.Collection) error {
+		return c.Find(bson.M{"name": theUser.UserName}).One(&isUser)
+	}
+	err = ExecuteQuery(userDbCollection, query)
+	if err != nil {
+		return "", err
+	}
+
+	if isUser.Password != CalculatePassHash(theUser.Password, isUser.Slat) {
+		return "", &couchdb.Error{
+			StatusCode: 401,
+			Reason:     "Username or Password Incorrect",
+		}
+	}
+
+	return isUser.ID.Hex(), nil
+}
+
 // validateUser func
 func (um *UserManager) validateUser(user *User) error {
 	var err error
-	if len(user.UserName) < 3 || len(user.UserName) > 80 {
+	if user.UserName == "" || len(user.UserName) < 3 || len(user.UserName) > 80 {
 		err = &couchdb.Error{
 			StatusCode: 400,
 			Reason:     "Username invalid",

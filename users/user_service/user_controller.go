@@ -3,10 +3,13 @@ package user_service
 import (
 	"log"
 	"net/http"
+	"time"
 
 	restful "github.com/emicklei/go-restful"
+	"github.com/laidingqing/amadd9/common/auth"
 	"github.com/laidingqing/amadd9/common/config"
 	. "github.com/laidingqing/amadd9/common/entities"
+	"github.com/laidingqing/amadd9/common/registry"
 	. "github.com/laidingqing/amadd9/common/services"
 	. "github.com/laidingqing/amadd9/common/util"
 )
@@ -114,6 +117,7 @@ func (uc UsersController) register(request *restful.Request, response *restful.R
 			WriteBadRequestError(response)
 			return
 		}
+		newUser.CreatedAt = time.Now()
 		rev, err := new(UserManager).Register(newUser)
 		if err != nil {
 			WriteError(err, response)
@@ -128,16 +132,48 @@ func (uc UsersController) register(request *restful.Request, response *restful.R
 
 func (uc UsersController) sessions(request *restful.Request, response *restful.Response) {
 	theUser := new(User)
-	err := request.ReadEntity(theUser)
-	if err != nil {
+	if err := request.ReadEntity(theUser); err != nil {
 		WriteBadRequestError(response)
 		return
 	}
 
-	//TODO check username and password, return a session struct
+	id, err := new(UserManager).checkUserByUsername(theUser)
+	if err != nil {
+		WriteError(err, response)
+		return
+	}
 
-	response.WriteHeader(http.StatusOK)
-	// response.WriteEntity(ur)
+	authEndpoint, err := registry.GetServiceLocation("auth")
+	if err != nil {
+		WriteBadRequestError(response)
+		return
+	}
+	reqUrl := authEndpoint + "/api/v1/auth"
+
+	log.Printf("auth endpoint url: %v", reqUrl)
+	authRequest, err := http.NewRequest("POST", reqUrl, nil)
+	if err != nil {
+		WriteError(err, response)
+		return
+	}
+	client := &http.Client{}
+	resp, err := client.Do(authRequest)
+
+	if err != nil {
+		WriteError(err, response)
+		return
+	}
+	defer resp.Body.Close()
+	auth := auth.JwtSession{}
+	if err = DecodeJsonData(resp.Body, &auth); err != nil {
+		WriteError(err, response)
+		return
+	} else {
+		auth.User = theUser.UserName
+		auth.ID = id
+		response.WriteHeader(http.StatusOK)
+		response.WriteEntity(auth)
+	}
 }
 
 func (uc UsersController) destroy(request *restful.Request, response *restful.Response) {

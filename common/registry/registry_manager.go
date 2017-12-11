@@ -121,10 +121,10 @@ func fetchServiceLists() {
 	// if err != nil {
 	// 	log.Println("Error fetching wiki services: " + err.Error())
 	// }
-	// authNodes, err := getServiceNodes(AuthLocation)
-	// if err != nil {
-	// 	log.Println("Error fetching auth services: " + err.Error())
-	// }
+	authNodes, err := getServiceNodes(AuthLocation)
+	if err != nil {
+		log.Println("Error fetching auth services: " + err.Error())
+	}
 	configNodes, err := getServiceNodes(ConfigServiceLocation)
 	if err != nil {
 		log.Println("Error fetching config services: " + err.Error())
@@ -133,7 +133,7 @@ func fetchServiceLists() {
 	defer serviceCache.Unlock()
 	serviceCache.m["users"] = userNodes
 	// serviceCache.m["wikis"] = wikiNodes
-	// serviceCache.m["auth"] = authNodes
+	serviceCache.m["auth"] = authNodes
 	serviceCache.m["config"] = configNodes
 
 }

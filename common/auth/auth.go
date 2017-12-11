@@ -17,6 +17,12 @@ var (
 	SecretKey = "welcome to amadd9"
 )
 
+type JwtSession struct {
+	ID    string `json:"id"`
+	User  string `json:"user"`
+	Token string `json:"token"`
+}
+
 type Session struct {
 	ID    string   `json:"id"`
 	User  string   `json:"user"`
@@ -76,6 +82,27 @@ func ValidateTokenMiddleware(w http.ResponseWriter, r *http.Request, next http.H
 	} else {
 		log.Println("Unauthorized access to this resource")
 		w.WriteHeader(http.StatusUnauthorized)
+	}
+
+}
+
+// ValidateToken Simple validate jwt token
+func ValidateToken(r *http.Request) bool {
+	token, err := request.ParseFromRequest(r, request.AuthorizationHeaderExtractor,
+		func(token *jwt.Token) (interface{}, error) {
+			return []byte(SecretKey), nil
+		})
+
+	if err == nil {
+		if token.Valid {
+			return true
+		} else {
+			log.Println("Token is not valid")
+			return false
+		}
+	} else {
+		log.Println("Unauthorized access to this resource")
+		return false
 	}
 
 }
