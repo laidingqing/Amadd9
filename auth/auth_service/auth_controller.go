@@ -51,7 +51,7 @@ func (ac AuthController) validateAuth(r *restful.Request, response *restful.Resp
 	})
 }
 
-// validate jwt session
+// create jwt session
 func (ac AuthController) create(r *restful.Request, response *restful.Response) {
 	jwt, err := auth.CreateJWT()
 	if err != nil {

@@ -45,7 +45,7 @@ func (uc UsersController) Register(container *restful.Container) {
 		Produces(restful.MIME_JSON)
 
 	usersWebService.Route(usersWebService.POST("").To(uc.create).
-		// Filter(AuthUser).
+		Filter(AuthUser).
 		Doc("Create a User").
 		Operation("create").
 		Reads(User{}).
@@ -67,6 +67,7 @@ func (uc UsersController) Register(container *restful.Container) {
 		Reads(User{}))
 
 	usersWebService.Route(usersWebService.GET("/{user-id}").To(uc.read).
+		Filter(AuthUser).
 		Doc("Gets a User").
 		Operation("read").
 		Param(usersWebService.PathParameter("user-id", "User Name").DataType("string")).
@@ -148,15 +149,17 @@ func (uc UsersController) sessions(request *restful.Request, response *restful.R
 		WriteBadRequestError(response)
 		return
 	}
-	reqUrl := authEndpoint + "/api/v1/auth"
+	reqURL := authEndpoint + "/api/v1/auth"
 
-	log.Printf("auth endpoint url: %v", reqUrl)
-	authRequest, err := http.NewRequest("POST", reqUrl, nil)
+	log.Printf("auth endpoint url: %v", reqURL)
+	authRequest, err := http.NewRequest("POST", reqURL, nil)
 	if err != nil {
 		WriteError(err, response)
 		return
 	}
 	client := &http.Client{}
+	authRequest.Header.Add("Accept", "application/json")
+	authRequest.Header.Add("Content-Type", "application/json")
 	resp, err := client.Do(authRequest)
 
 	if err != nil {

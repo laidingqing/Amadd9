@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	restful "github.com/emicklei/go-restful"
+	. "github.com/laidingqing/amadd9/common/auth"
 	"github.com/laidingqing/amadd9/common/config"
 	. "github.com/laidingqing/amadd9/common/entities"
 	couchdb "github.com/rhinoman/couchdb-go"
@@ -133,9 +134,8 @@ func GetCurrentUser(request *restful.Request, response *restful.Response) *Curre
 	curUser, ok := request.Attribute("currentUser").(*CurrentUserInfo)
 	if ok == false || curUser == nil {
 		return nil
-	} else {
-		return curUser
 	}
+	return curUser
 }
 
 //Unauthenticated , Writes unauthenticated error to response
@@ -145,26 +145,12 @@ func Unauthenticated(request *restful.Request, response *restful.Response) {
 	response.WriteErrorString(401, "Unauthenticated")
 }
 
-// func AuthUser(request *restful.Request, resp *restful.Response, chain *restful.FilterChain) {
-// 	cAuth, err := GetAuth(request.Request)
-// 	if err == http.ErrNoCookie && config.Auth.AllowGuest {
-// 		cAuth = &couchdb.BasicAuth{
-// 			Username: "guest",
-// 			Password: "guest",
-// 		}
-// 	} else if err != nil {
-// 		Unauthenticated(request, resp)
-// 		return
-// 	}
-// 	userInfo, err := GetUserFromAuth(cAuth)
-// 	if err != nil {
-// 		Unauthenticated(request, resp)
-// 		return
-// 	}
-// 	cui := &CurrentUserInfo{
-// 		Auth: cAuth,
-// 		User: userInfo,
-// 	}
-// 	request.SetAttribute("currentUser", cui)
-// 	chain.ProcessFilter(request, resp)
-// }
+//AuthUser ..jwt token validate.
+func AuthUser(request *restful.Request, resp *restful.Response, chain *restful.FilterChain) {
+	res := ValidateToken(request.Request)
+	if !res {
+		Unauthenticated(request, resp)
+		return
+	}
+	chain.ProcessFilter(request, resp)
+}

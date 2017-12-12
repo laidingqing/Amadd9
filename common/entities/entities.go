@@ -47,3 +47,21 @@ type CurrentUserInfo struct {
 	Roles []string
 	User  *User
 }
+
+//WikiRecord wiki record model.
+type WikiRecord struct {
+	ID          bson.ObjectId `bson:"_id" json:"id,omitempty"`
+	Slug        string        `bson:"slug" json:"slug,omitempty"`
+	Name        string        `bson:"name" json:"name"`
+	Description string        `bson:"description" json:"description,omitempty"`
+	CreatedAt   time.Time     `bson:"createdAt" json:"createdAt"`
+	ModifiedAt  time.Time     `bson:"modifiedAt" json:"modifiedAt"`
+	HomePageID  string        `bson:"homePageId" json:"homePageId,omitempty"`
+	AllowGuest  bool          `bson:"allowGuest" json:"allowGuest"`
+	Type        string        `bson:"type" json:"type"`
+}
+
+type ViewResponse struct {
+	TotalRows int `json:"total_rows"`
+	Offset    int `json:"offset"`
+}

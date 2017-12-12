@@ -44,7 +44,7 @@ func (um *UserManager) Create(newUser *User, curUser *CurrentUserInfo) (string, 
 	}
 	query := func(c *mgo.Collection) error {
 		newUser.ID = bson.NewObjectId()
-		newUser.Password = CalculatePassHash(newUser.Password, newUser.UserName)
+		newUser.Password = CalculatePassHash(newUser.Password, newUser.Slat)
 		return c.Insert(newUser)
 	}
 
@@ -67,6 +67,8 @@ func (um *UserManager) checkUserByUsername(theUser *User) (string, error) {
 	if err != nil {
 		return "", err
 	}
+
+	log.Printf("password: %v, %v, %v", isUser.Password, theUser.Password, CalculatePassHash(theUser.Password, isUser.Slat))
 
 	if isUser.Password != CalculatePassHash(theUser.Password, isUser.Slat) {
 		return "", &couchdb.Error{
