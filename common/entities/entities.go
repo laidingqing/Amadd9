@@ -65,3 +65,49 @@ type ViewResponse struct {
 	TotalRows int `json:"total_rows"`
 	Offset    int `json:"offset"`
 }
+
+//Artist 艺术家
+type Artist struct {
+	ID        bson.ObjectId `bson:"_id" json:"id"`
+	Name      string        `bson:"name" json:"name"`
+	CreatedAt time.Time     `bson:"createdAt" json:"createdAt"`
+}
+
+//Revision tab版本
+type Revision struct {
+	RevisionID string    `bson:"_id" json:"id"`
+	TabsID     string    `bson:"tabsID" json:"tabsID"`
+	UserID     string    `bson:"userID" json:"userID"`
+	UploadedAt time.Time `bson:"uploadedAt" json:"uploadedAt"`
+	FileName   string    `bson:"fileName" json:"fileName"`
+	Summary    string    `bson:"summary" json:"summary"`
+}
+
+//Tracks backing tracks
+type Tracks struct {
+	TrackID    string    `bson:"_id" json:"id"`
+	TabsID     string    `bson:"tabsID" json:"tabsID"`
+	UserID     string    `bson:"userID" json:"userID"`
+	UploadedAt time.Time `bson:"uploadedAt" json:"uploadedAt"`
+	FileName   string    `bson:"fileName" json:"fileName"`
+	Summary    string    `bson:"summary" json:"summary"`
+}
+
+//Annotation tabs annotation.
+type Annotation struct {
+	AnnotationID string `bson:"_id" json:"id"`
+	TabsID       string `bson:"tabsID" json:"tabsID"`
+	UserID       string `bson:"userID" json:"userID"`
+	//TODO other fields
+}
+
+//Tabs gtp tab libs
+type Tabs struct {
+	ID         bson.ObjectId `bson:"_id" json:"id"`
+	Name       string        `bson:"name" json:"name"`
+	Slug       string        `bson:"slug" json:"slug"`
+	ArtistID   string        `bson:"artistID" json:"artistID"`
+	CreatedAt  time.Time     `bson:"createdAt" json:"createdAt"`
+	ModifiedAt time.Time     `bson:"modifiedAt" json:"modifiedAt"`
+	UseRevID   string        `bson:"useRevID" json:"useRevID"`
+}
