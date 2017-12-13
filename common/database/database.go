@@ -39,3 +39,15 @@ func ExecuteQuery(collectionName string, s func(*mgo.Collection) error) error {
 	defer session.Close()
 	return s(session.DB(databaseName).C(collectionName))
 }
+
+// ExecuteCount count query
+func ExecuteCount(collectionName string, s func(*mgo.Collection) (int, error)) (int, error) {
+	dbURL := config.Database.DbHost
+	mgoSession, err := mgo.Dial(dbURL)
+	if err != nil {
+		log.Fatalf("Error! %v", err)
+	}
+	session := mgoSession.Clone()
+	defer session.Close()
+	return s(session.DB(databaseName).C(collectionName))
+}

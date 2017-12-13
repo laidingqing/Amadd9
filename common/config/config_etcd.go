@@ -29,6 +29,7 @@ const (
 	AuthService
 	UserService
 	WikiService
+	LibsService
 	FrontendService
 )
 
@@ -40,6 +41,8 @@ func ServiceSectionFromString(sectionStr string) (ServiceSection, error) {
 		return UserService, nil
 	case "wiki":
 		return WikiService, nil
+	case "libs":
+		return LibsService, nil
 	case "frontend":
 		return FrontendService, nil
 	default:

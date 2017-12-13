@@ -27,6 +27,7 @@ var client *etcd.Client
 var kapi etcd.KeysAPI
 var EtcdPrefix = "/amadd9"
 var UsersLocation = EtcdPrefix + "/services/users/"
+var LibsLocation = EtcdPrefix + "/services/libs/"
 var WikisLocation = EtcdPrefix + "/services/wikis/"
 var AuthLocation = EtcdPrefix + "/services/auth/"
 var ConfigServiceLocation = EtcdPrefix + "/services/config/"
@@ -117,10 +118,10 @@ func fetchServiceLists() {
 	if err != nil {
 		log.Println("Error fetching user services: " + err.Error())
 	}
-	// wikiNodes, err := getServiceNodes(WikisLocation)
-	// if err != nil {
-	// 	log.Println("Error fetching wiki services: " + err.Error())
-	// }
+	wikiNodes, err := getServiceNodes(WikisLocation)
+	if err != nil {
+		log.Println("Error fetching wiki services: " + err.Error())
+	}
 	authNodes, err := getServiceNodes(AuthLocation)
 	if err != nil {
 		log.Println("Error fetching auth services: " + err.Error())
@@ -132,7 +133,7 @@ func fetchServiceLists() {
 	serviceCache.Lock()
 	defer serviceCache.Unlock()
 	serviceCache.m["users"] = userNodes
-	// serviceCache.m["wikis"] = wikiNodes
+	serviceCache.m["wikis"] = wikiNodes
 	serviceCache.m["auth"] = authNodes
 	serviceCache.m["config"] = configNodes
 

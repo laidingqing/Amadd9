@@ -17,7 +17,7 @@ func main() {
 	config.ParseCmdParams(config.DefaultCmdLine{
 		HostName:         "localhost",
 		NodeId:           "libs1",
-		Port:             "4100",
+		Port:             "4200",
 		UseSSL:           false,
 		RegistryLocation: "http://localhost:2379", //Etcd endpoints
 	})
@@ -38,7 +38,7 @@ func main() {
 	uc := libs_service.LibraryController{}
 	uc.Register(wsContainer)
 	database.InitDb()
-	registry.Init(registry.UsersEndpointName(), registry.UsersLocation)
+	registry.Init(registry.LibraryEndpointName(), registry.LibsLocation)
 	httpAddr := ":" + config.Service.Port
 	if config.Service.UseSSL == true {
 		certFile := config.Service.SSLCertFile

@@ -9,3 +9,8 @@ func UsersEndpointName() string {
 func AuthEndpointName() string {
 	return "Auth"
 }
+
+// LibraryEndpointName library service endpoint name
+func LibraryEndpointName() string {
+	return "Library"
+}
