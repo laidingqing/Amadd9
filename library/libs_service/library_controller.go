@@ -23,9 +23,9 @@ func (uc LibraryController) Service() *restful.WebService {
 // Register register webservice
 func (uc LibraryController) Register(container *restful.Container) {
 
-	lc := LibraryController{}
 	ac := ArtistController{}
 	tc := TabsController{}
+	rc := RevisionController{}
 
 	log.Println("Register restful.Container")
 	libsWebService = new(restful.WebService)
@@ -37,8 +37,9 @@ func (uc LibraryController) Register(container *restful.Container) {
 		Consumes(restful.MIME_JSON).
 		Produces(restful.MIME_JSON)
 
-	tc.AddRoutes(libsWebService)
-	lc.AddRoutes(libsWebService)
 	ac.AddRoutes(libsWebService)
+	tc.AddRoutes(libsWebService)
+	rc.AddRoutes(libsWebService)
+
 	container.Add(libsWebService)
 }

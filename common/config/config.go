@@ -59,6 +59,15 @@ var ServiceRegistry struct {
 	CacheRefreshInterval uint64
 }
 
+var KafkaConsumer struct {
+	Broker                 string
+	Group                  string
+	OffsetReset            string
+	Topics                 []string
+	ConsumerChannels       int
+	ConsumerTimestampField string
+}
+
 var Users struct {
 	AvatarDb string
 }
@@ -90,4 +99,10 @@ func LoadDefaults() {
 	Auth.AllowNewUserRegistration = true
 	Auth.MinPasswordLength = 6
 	Users.AvatarDb = "avatar_ut"
+	KafkaConsumer.Broker = "127.0.0.1:9092"
+	KafkaConsumer.Group = "testinggroupnameblah3"
+	KafkaConsumer.Topics = []string{"atp-flexfulfillment-product-location-eligibility"}
+	KafkaConsumer.OffsetReset = "earliest"
+	KafkaConsumer.ConsumerChannels = 1
+	KafkaConsumer.ConsumerTimestampField = "updated_on"
 }

@@ -75,12 +75,12 @@ type ArtistRecord struct {
 
 //RevisionRecord tab版本
 type RevisionRecord struct {
-	RevisionID string    `bson:"_id" json:"id"`
-	TabsID     string    `bson:"tabsID" json:"tabsID"`
-	UserID     string    `bson:"userID" json:"userID"`
-	UploadedAt time.Time `bson:"uploadedAt" json:"uploadedAt"`
-	FileName   string    `bson:"fileName" json:"fileName"`
-	Summary    string    `bson:"summary" json:"summary"`
+	ID         bson.ObjectId `bson:"_id" json:"id"`
+	TabsID     string        `bson:"tabsID" json:"tabsID"`
+	UserID     string        `bson:"userID" json:"userID"`
+	UploadedAt time.Time     `bson:"uploadedAt" json:"uploadedAt"`
+	FileName   string        `bson:"fileName" json:"fileName"`
+	Summary    string        `bson:"summary" json:"summary"`
 }
 
 //TrackRecord backing tracks

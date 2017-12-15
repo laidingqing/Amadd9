@@ -1,6 +1,7 @@
 package wiki_service
 
 import (
+	"log"
 	"net/http"
 
 	restful "github.com/emicklei/go-restful"
@@ -53,7 +54,7 @@ func (wc WikisController) Register(container *restful.Container) {
 	// fc := FileController{}
 	wikisWebService = new(restful.WebService)
 	wikisWebService.Filter(LogRequest).
-		Filter(AuthUser).
+		// Filter(AuthUser).
 		ApiVersion(ApiVersion()).
 		Path(wc.wikiUri()).
 		Doc("Manage Wikis").
@@ -80,11 +81,11 @@ func (wc WikisController) Register(container *restful.Container) {
 	// 	Param(wikisWebService.PathParameter("wiki-id", "Wiki identifier").DataType("string")).
 	// 	Writes(WikiRecordResponse{}))
 	//
-	// wikisWebService.Route(wikisWebService.GET("/slug/{wiki-slug}").To(wc.readBySlug).
-	// 	Doc("Fetch a Wiki Record by its slug").
-	// 	Operation("readBySlug").
-	// 	Param(wikisWebService.PathParameter("wiki-slug", "Wiki Slug").DataType("string")).
-	// 	Writes(WikiRecordResponse{}))
+	wikisWebService.Route(wikisWebService.GET("/slug/{wiki-slug}").To(wc.readBySlug).
+		Doc("Fetch a Wiki Record by its slug").
+		Operation("readBySlug").
+		Param(wikisWebService.PathParameter("wiki-slug", "Wiki Slug").DataType("string")).
+		Writes(WikiRecordResponse{}))
 	//
 	// wikisWebService.Route(wikisWebService.PUT("/{wiki-id}").To(wc.update).
 	// 	Doc("Update a Wiki Record").
@@ -107,11 +108,12 @@ func (wc WikisController) Register(container *restful.Container) {
 
 //create Create a new wiki
 func (wc WikisController) create(request *restful.Request, response *restful.Response) {
-	curUser := GetCurrentUser(request, response)
-	if curUser == nil {
-		Unauthenticated(request, response)
-		return
-	}
+	log.Print("Create a new wiki")
+	// curUser := GetCurrentUser(request, response)
+	// if curUser == nil {
+	// 	Unauthenticated(request, response)
+	// 	return
+	// }
 	theWiki := new(WikiRecord)
 	err := request.ReadEntity(theWiki)
 	if err != nil {
@@ -119,7 +121,35 @@ func (wc WikisController) create(request *restful.Request, response *restful.Res
 		return
 	}
 
-	// response.AddHeader("ETag", rev)
+	rev, err := new(WikiManager).Create(theWiki, nil)
+	if err != nil {
+		WriteError(err, response)
+		return
+	}
+	response.AddHeader("ETag", rev)
 	response.WriteHeader(http.StatusCreated)
-	// response.WriteEntity(wr)
+	wr := wc.genRecordResponse(theWiki)
+	response.WriteEntity(wr)
+}
+
+//Generate a record response
+func (wc WikisController) genRecordResponse(wikiRecord *WikiRecord) WikiRecordResponse {
+	wrr := WikiRecordResponse{
+		WikiRecord: *wikiRecord,
+	}
+	return wrr
+}
+
+//Fetch a Wiki Record by its slug
+func (wc WikisController) readBySlug(request *restful.Request, response *restful.Response) {
+	wikiSlug := request.PathParameter("wiki-slug")
+	theWiki := new(WikiRecord)
+	rev, err := new(WikiManager).ReadBySlug(wikiSlug, theWiki, nil)
+	if err != nil {
+		WriteError(err, response)
+		return
+	}
+	response.AddHeader("ETag", rev)
+	wr := wc.genRecordResponse(theWiki)
+	response.WriteEntity(wr)
 }

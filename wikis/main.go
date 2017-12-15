@@ -46,8 +46,7 @@ func main() {
 	if config.Service.UseSSL == true {
 		certFile := config.Service.SSLCertFile
 		keyFile := config.Service.SSLKeyFile
-		log.Fatal(http.ListenAndServeTLS(httpAddr,
-			certFile, keyFile, wsContainer))
+		log.Fatal(http.ListenAndServeTLS(httpAddr, certFile, keyFile, wsContainer))
 	} else {
 		log.Fatal(http.ListenAndServe(httpAddr, wsContainer))
 	}

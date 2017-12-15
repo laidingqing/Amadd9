@@ -4,8 +4,11 @@ import (
 	"net/url"
 	"time"
 
+	. "github.com/laidingqing/amadd9/common/database"
 	. "github.com/laidingqing/amadd9/common/entities"
+	. "github.com/laidingqing/amadd9/common/util"
 	"github.com/rhinoman/go-slugification"
+	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
 
@@ -43,21 +46,47 @@ type KvItem struct {
 	Value int    `json:"value"`
 }
 
+//WikiManager wiki database manager
 type WikiManager struct{}
 
-func WikiDbName(id string) string {
-	return "wiki_" + id
-}
+var (
+	wikiDbCollection = "wikis"
+)
 
 //Create a new wiki
-func (wm *WikiManager) Create(id string, wr *WikiRecord, curUser *CurrentUserInfo) (string, error) {
+func (wm *WikiManager) Create(wr *WikiRecord, curUser *CurrentUserInfo) (string, error) {
+	py := new(Pinyin)
 	wr.ID = bson.NewObjectId()
-	wr.Slug = slugification.Slugify(wr.Name)
+	p, _ := py.Convert(wr.Name)
+
+	wr.Slug = slugification.Slugify(p)
 	wr.CreatedAt = time.Now().UTC()
 	wr.ModifiedAt = time.Now().UTC()
 	wr.Type = "wiki_record"
 
-	return "", nil
+	query := func(c *mgo.Collection) error {
+		return c.Insert(wr)
+	}
+
+	err := ExecuteQuery(wikiDbCollection, query)
+	if err != nil {
+		return "", err
+	}
+
+	return wr.ID.Hex(), nil
+}
+
+//ReadBySlug Fetch a wiki record by its slug
+func (wm *WikiManager) ReadBySlug(slug string, wikiRecord *WikiRecord, curUser *CurrentUserInfo) (string, error) {
+
+	query := func(c *mgo.Collection) error {
+		return c.Find(bson.M{"slug": slug}).One(&wikiRecord)
+	}
+	err := ExecuteQuery(wikiDbCollection, query)
+	if err != nil {
+		return "", NotFoundError()
+	}
+	return wikiRecord.ID.Hex(), nil
 }
 
 // checkForDuplicateSlug Check for duplicate wiki slug

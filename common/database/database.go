@@ -28,6 +28,14 @@ func NotAdminError() error {
 	}
 }
 
+//NotFoundError data not found
+func NotFoundError() error {
+	return &couchdb.Error{
+		StatusCode: 404,
+		Reason:     "Not Found",
+	}
+}
+
 // ExecuteQuery ..
 func ExecuteQuery(collectionName string, s func(*mgo.Collection) error) error {
 	dbURL := config.Database.DbHost

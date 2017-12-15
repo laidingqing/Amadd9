@@ -138,6 +138,13 @@ func GetCurrentUser(request *restful.Request, response *restful.Response) *Curre
 	return curUser
 }
 
+//NoFoundTabRecord , Writes no found error to response
+func NoFoundTabRecord(request *restful.Request, response *restful.Response) {
+	LogError(request, response, errors.New("NoFound"))
+	response.AddHeader("Content-Type", "text/plain")
+	response.WriteErrorString(404, "NoFound")
+}
+
 //Unauthenticated , Writes unauthenticated error to response
 func Unauthenticated(request *restful.Request, response *restful.Response) {
 	LogError(request, response, errors.New("Unauthenticated"))

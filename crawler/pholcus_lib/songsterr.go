@@ -57,32 +57,33 @@ var Songsterr = &Spider{
 						a, _ := s.Attr("href")
 						name := s.Find(".SongsItem-name").First()
 						artist := s.Find(".SongsItem-artist").First()
-						temp := ctx.CreatItem(map[int]interface{}{
-							0: name,
-							1: artist,
-							2: a,
+						ctx.AddQueue(&request.Request{
+							Url:  BaseURL + a,
+							Rule: "gtp",
+							Temp: map[string]interface{}{
+								"0": name,
+								"1": artist,
+								"2": a,
+							},
+							Priority: 1,
 						})
-						logs.Log.Critical("[消息提示：| 艺术家：%v | 专辑：%v | 地址：%v | 文件: %v]\n", temp["0"], temp["1"], temp["2"], "")
-						// ctx.AddQueue(&request.Request{
-						// 	Url:      BaseURL + a,
-						// 	Rule:     "详情",
-						// 	Temp:     temp,
-						// 	Priority: 1,
-						// })
 					})
 				},
 			},
 
-			"详情": {
+			"gtp": {
 				ParseFunc: func(ctx *Context) {
 					query := ctx.GetDom()
 					temp := ctx.CopyTemps()
-					query.Find("script").Each(func(arg0 int, s *goquery.Selection) {
+					query.Find("script").Each(func(i int, s *goquery.Selection) {
 						src := s.Text()
-						re, _ := regexp.Compile(`source:"[\s\S]*"`)
+						// logs.Log.Critical("src: %v", src)
+						re, _ := regexp.Compile(`source":"[\s\S]*(.gp5|.gp4)"`)
 						source := re.FindString(src)
-						urlStr := source[8 : len(source)-1]
-						temp["3"] = urlStr
+						if source != "" {
+							urlStr := source[8 : len(source)-1]
+							temp["3"] = urlStr
+						}
 						logs.Log.Critical("[消息提示：| 艺术家：%v | 专辑：%v | 地址：%v | 文件: %v]\n", temp["0"], temp["1"], temp["2"], temp["3"])
 						ctx.Output(temp)
 					})

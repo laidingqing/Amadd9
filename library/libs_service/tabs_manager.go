@@ -36,3 +36,16 @@ func (tm *TabsManager) Create(newTab *TabRecord, curUser *CurrentUserInfo) (stri
 	}
 	return newTab.ID.Hex(), nil
 }
+
+//Get get a tab record
+func (tm *TabsManager) Get(tabID string) (string, error) {
+	tr := TabRecord{}
+	query := func(c *mgo.Collection) error {
+		return c.FindId(bson.ObjectIdHex(tabID)).One(tr)
+	}
+	err := ExecuteQuery(tabsDbCollection, query)
+	if err != nil {
+		return "", err
+	}
+	return tr.ID.Hex(), nil
+}
