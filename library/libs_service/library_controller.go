@@ -40,6 +40,5 @@ func (uc LibraryController) Register(container *restful.Container) {
 	ac.AddRoutes(libsWebService)
 	tc.AddRoutes(libsWebService)
 	rc.AddRoutes(libsWebService)
-
 	container.Add(libsWebService)
 }

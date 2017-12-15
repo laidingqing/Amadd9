@@ -58,15 +58,24 @@ func (rc RevisionController) index(request *restful.Request, response *restful.R
 func (rc RevisionController) create(request *restful.Request, response *restful.Response) {
 	tabID := request.PathParameter("tabs-id")
 	rm := new(RevisionManager)
+	fm := new(FileManager)
 	rr := RevisionResponse{}
 	//TODO file uploader
 	newRevision := new(RevisionRecord)
 	newRevision.TabsID = tabID
 	err := request.ReadEntity(newRevision)
+
 	if err != nil {
 		WriteError(err, response)
 		return
 	}
+
+	fsID, err := fm.Download(newRevision.URL)
+	if err != nil {
+		WriteError(err, response)
+		return
+	}
+	newRevision.FileName = fsID
 	rev, err := rm.create(newRevision, &rr)
 	if err != nil {
 		WriteError(err, response)
@@ -80,7 +89,8 @@ func (rc RevisionController) create(request *restful.Request, response *restful.
 //FindByTabFilter ..jwt token validate.
 func FindByTabFilter(request *restful.Request, resp *restful.Response, chain *restful.FilterChain) {
 	tm := new(TabsManager)
-	_, err := tm.Get(request.PathParameter("tabs-id"))
+	id, err := tm.Get(request.PathParameter("tabs-id"))
+	log.Printf("Find Tab id %v", id)
 	if err != nil {
 		NoFoundTabRecord(request, resp)
 		return

@@ -76,11 +76,12 @@ type ArtistRecord struct {
 //RevisionRecord tab版本
 type RevisionRecord struct {
 	ID         bson.ObjectId `bson:"_id" json:"id"`
-	TabsID     string        `bson:"tabsID" json:"tabsID"`
-	UserID     string        `bson:"userID" json:"userID"`
-	UploadedAt time.Time     `bson:"uploadedAt" json:"uploadedAt"`
-	FileName   string        `bson:"fileName" json:"fileName"`
-	Summary    string        `bson:"summary" json:"summary"`
+	TabsID     string        `bson:"tabsID" json:"tabsID,omitempty"`
+	UserID     string        `bson:"userID" json:"userID,omitempty"`
+	UploadedAt time.Time     `bson:"uploadedAt" json:"uploadedAt,omitempty"`
+	FileName   string        `bson:"fileName" json:"fileName,omitempty"`
+	URL        string        `bson:"-" json:"url,omitempty"`
+	Summary    string        `bson:"summary" json:"summary,omitempty"`
 }
 
 //TrackRecord backing tracks
@@ -95,10 +96,14 @@ type TrackRecord struct {
 
 //AnnotationRecord tabs annotation.
 type AnnotationRecord struct {
-	AnnotationID string `bson:"_id" json:"id"`
-	TabsID       string `bson:"tabsID" json:"tabsID"`
-	UserID       string `bson:"userID" json:"userID"`
-	//TODO other fields
+	AnnotationID bson.ObjectId `bson:"_id" json:"id"`
+	TabsID       string        `bson:"tabsID" json:"tabsID,omitempty"`
+	UserID       string        `bson:"userID" json:"userID,omitempty"`
+	StartBar     int           `bson:"startBar" json:"startBar,omitempty"`
+	EndBar       int           `bson:"endBar" json:"endBar,omitempty"`
+	Track        int           `bson:"track" json:"track,omitempty"`     //哪一轨
+	Content      string        `bson:"content" json:"content,omitempty"` //Markdown format, should ref to wiki
+	CreatedAt    time.Time     `bson:"createdAt" json:"createdAt,omitempty"`
 }
 
 //TabRecord gtp tab libs

@@ -13,18 +13,19 @@ var (
 	revisionDbCollection = "revisions"
 )
 
-// ArtistManager artist db manager
+//RevisionManager revision db manager
 type RevisionManager struct{}
 
 func (rm *RevisionManager) index(tabID string, rlr *RevisionsListResponse) (string, error) {
+	var list []RevisionRecord
 	query := func(c *mgo.Collection) error {
-		return c.Find(bson.M{"tabsID": tabID}).All(&rlr)
+		return c.Find(bson.M{"tabsID": tabID}).All(&list)
 	}
 	err := ExecuteQuery(revisionDbCollection, query)
 	if err != nil {
 		return "", err
 	}
-
+	rlr.Revisions = list
 	return "", nil
 }
 
